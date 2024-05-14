@@ -4,14 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paterix</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="index.js" type="module"></script>
   </head>
   <body>
     <nav>
-      <div class="nav-container">
+      <div id="navigatore" class="nav-container">
+        <div class="nome" onclick="window.location.href='#home'">
+          Vittorio Paternostro
+          <div class="sottonome">software engineer</div>
+        </div>
         <div class="nav-links" id="navLinks">
-          <a href="#overview">Home</a>
+          <!-- <a href="#overview">Home</a> -->
           <a href="#career">Career</a>
           <div class="dropdown">
             <button class="dropbtn">
@@ -25,11 +29,26 @@
           </div>
           <a href="#about">About Me</a>
         </div>
-        <div class="nome">
-          Vittorio Paternostro
-          <div class="sottonome">software engineer</div>
-        </div>
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <!-- <div id="burger" class="menu-icon" onclick="toggleResponsiveMenu()">
+          &#9776;
+        </div> -->
+        <!-- <script>
+          const divElement = document.getElementById("navigatore");
+          divElement.addEventListener("click", function () {
+            window.location.href = "#home";
+          });
+        </script> -->
+
+        <script>
+          function toggleResponsiveMenu() {
+            var x = document.getElementById("burger");
+            if (x.className === "menu-icon") {
+              x.className += " responsive";
+            } else {
+              x.className = "menu-icon";
+            }
+          }
+        </script>
       </div>
     </nav>
     <div class="content">
