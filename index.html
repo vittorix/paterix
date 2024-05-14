@@ -4,8 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paterix</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" type="module"></script>
   </head>
   <body>
-    <p>initial commit</p>
+    <nav>
+      <div class="nav-container">
+        <div class="nav-links" id="navLinks">
+          <a href="#overview">Home</a>
+          <a href="#career">Career</a>
+          <div class="dropdown">
+            <button class="dropbtn">
+              Resume
+              <i class="arrow down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#short-resume">Short Resume (1 Page)</a>
+              <a href="#long-resume">Long Resume (4 Pages)</a>
+            </div>
+          </div>
+          <a href="#about">About Me</a>
+        </div>
+        <div class="nome">
+          Vittorio Paternostro
+          <div class="sottonome">software engineer</div>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      </div>
+    </nav>
+    <div class="content">
+      <h2>OBJECTIVES</h2>
+      <p>
+        High quality software engineering leadership in a company where
+        cooperation and growth are critical to success.
+      </p>
+    </div>
   </body>
 </html>
