@@ -9,7 +9,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.container {
+.nav_header {
   width: 100%;
   /* justify-content: space-between; */
   /* align-items: center; */
@@ -19,12 +19,12 @@ body {
   padding: 10px;
 }
 
-.content {
+.nav_content {
   float: left;
   /* background-color: yellow; */
 }
 
-.nome {
+.my_name {
   color: #ff8142;
   font-size: 22px;
   font-weight: bold;
@@ -32,13 +32,13 @@ body {
   cursor: pointer;
 }
 
-.sottonome {
+.my_job {
   color: white;
   font-size: 16px;
   /* font-weight: bold; */
 }
 
-.bottoni {
+.buttons {
   /* background-color: green; */
   justify-content: space-between;
   align-items: center;
@@ -46,14 +46,14 @@ body {
   font-size: 16px;
 }
 
-.bottoni a {
+.buttons a {
   color: #fff;
   text-decoration: none;
   display: inline-block;
-  padding: 0px 30px;
+  padding: 0px 10px 0px 0px;
 }
 
-.bottoni a:hover,
+.buttons a:hover,
 .dropdown:hover .dropbtn {
   color: #ff8142;
   /* background-color: #575757; */
@@ -67,13 +67,13 @@ body {
 .dropdown {
   display: inline-block;
   font-size: 16px;
+  padding: 0px 10px 0px 0px;
 }
 
 .dropbtn {
   font-size: 16px;
   background-color: #333;
   color: white;
-  padding: 0px 0px;
   border: none;
   cursor: pointer;
 }
@@ -82,15 +82,16 @@ body {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: auto;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  border-radius: 4px;
 }
 
 .dropdown-content a {
   font-size: 16px;
   color: black;
-  padding: 12px 16px;
+  padding: 5px 5px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -98,6 +99,7 @@ body {
 
 .dropdown-content a:hover {
   background-color: #f1f1f1;
+  border-radius: 4px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -106,7 +108,7 @@ body {
 
 /* Responsive styling
 @media only screen and (min-width: 768px) {
-  .bottoni {
+  .buttons {
     margin: 30;
     padding: 30;
     font-size: 22;
@@ -115,15 +117,15 @@ body {
 */
 
 /* If the screen size is 601px or more, set the font-size of <div> to 80px */
-@media only screen and (min-width: 501px) {
-  div.bottoni div.dropdown {
+/* @media only screen and (min-width: 501px) {
+  div.buttons div.dropdown {
     font-size: 16px;
   }
-}
+} */
 
 /* If the screen size is 600px or less, set the font-size of <div> to 30px */
-@media only screen and (max-width: 500px) {
-  div.bottoni div.dropdown {
+/* @media only screen and (max-width: 500px) {
+  div.buttons div.dropdown {
     font-size: 22px;
   }
-}
+} */

@@ -8,13 +8,15 @@
     <script src="index.js" type="module"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="nome content" onclick="window.location.href='index.html'">
+    <div class="nav_header">
+      <div
+        class="my_name nav_content"
+        onclick="window.location.href='index.html'"
+      >
         Vittorio Paternostro
-        <div class="sottonome">software engineer</div>
+        <div class="my_job">software engineer</div>
       </div>
-
-      <div class="bottoni content" id="navLinks">
+      <div class="buttons nav_content" id="navLinks">
         <a href="index.html">Home</a>
         <a href="career.html">Career</a>
         <div class="dropdown">
@@ -29,26 +31,6 @@
         </div>
         <a href="contact.html">Contact</a>
       </div>
-      <!-- <div id="burger" class="menu-icon" onclick="toggleResponsiveMenu()">
-          &#9776;
-        </div> -->
-      <!-- <script>
-          const divElement = document.getElementById("navigatore");
-          divElement.addEventListener("click", function () {
-            window.location.href = "#home";
-          });
-        </script> -->
-
-      <script>
-        function toggleResponsiveMenu() {
-          var x = document.getElementById("burger");
-          if (x.className === "menu-icon") {
-            x.className += " responsive";
-          } else {
-            x.className = "menu-icon";
-          }
-        }
-      </script>
     </div>
     <div class="testo">
       <h2>OBJECTIVES</h2>
@@ -58,8 +40,9 @@
       </p>
       <h2>OTHER</h2>
       <p>
-        leadership leadership leadership leadership leadership leadership
-        leadership leadership
+        leadership leadership <a href="index.html">Home</a>
+        <a href="career.html">Career</a>leadership leadership leadership
+        leadership leadership leadership
       </p>
     </div>
   </body>
