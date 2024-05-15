@@ -9,56 +9,71 @@ body {
   font-family: Arial, sans-serif;
 }
 
-nav {
+.nav_header {
+  width: 100%;
+  /* justify-content: space-between; */
+  /* align-items: center; */
   background-color: #333;
   overflow: hidden;
-  font-size: 24px;
+  /* font-size: 16px; */
+  padding: 10px;
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0px 10px 12px;
+.nav_content {
+  float: left;
+  /* background-color: yellow; */
 }
 
-.nome {
+.my_name {
   color: #ff8142;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   min-width: 250px;
   cursor: pointer;
 }
 
-.sottonome {
+.my_job {
   color: white;
   font-size: 16px;
   /* font-weight: bold; */
 }
 
-.nav-links a {
+.buttons {
+  /* background-color: green; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px 0px 0px;
+  font-size: 16px;
+}
+
+.buttons a {
   color: #fff;
   text-decoration: none;
   display: inline-block;
-  font-size: 20px;
-  padding: 0px 30px;
+  padding: 0px 10px 0px 0px;
 }
 
-.nav-links a:hover,
+.buttons a:hover,
 .dropdown:hover .dropbtn {
   color: #ff8142;
   /* background-color: #575757; */
 }
 
+.testo {
+  padding: 10px;
+  clear: both;
+}
+
 .dropdown {
   display: inline-block;
+  font-size: 16px;
+  padding: 0px 10px 0px 0px;
 }
 
 .dropbtn {
-  font-size: 20px;
+  font-size: 16px;
   background-color: #333;
   color: white;
-  padding: 0px 0px;
   border: none;
   cursor: pointer;
 }
@@ -67,15 +82,16 @@ nav {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: auto;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  border-radius: 4px;
 }
 
 .dropdown-content a {
-  font-size: 17px;
+  font-size: 16px;
   color: black;
-  padding: 12px 16px;
+  padding: 5px 5px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -83,39 +99,33 @@ nav {
 
 .dropdown-content a:hover {
   background-color: #f1f1f1;
+  border-radius: 4px;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-.responsive {
-  display: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: white;
-}
-
-.content {
-  padding: 10px;
-}
-
-/* Responsive styling */
-@media screen and (max-width: 768px) {
-  .nav-links {
-    /* display: none;
-    width: 100%; */
-    margin: 0;
-    padding: 0;
-  }
-
-  /* .nav-links a,
-  .dropdown {
-    display: block;
-    text-align: center;
-  } */
-
-  .menu-icon {
-    display: block;
+/* Responsive styling
+@media only screen and (min-width: 768px) {
+  .buttons {
+    margin: 30;
+    padding: 30;
+    font-size: 22;
   }
 }
+*/
+
+/* If the screen size is 601px or more, set the font-size of <div> to 80px */
+/* @media only screen and (min-width: 501px) {
+  div.buttons div.dropdown {
+    font-size: 16px;
+  }
+} */
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+/* @media only screen and (max-width: 500px) {
+  div.buttons div.dropdown {
+    font-size: 22px;
+  }
+} */
