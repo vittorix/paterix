@@ -9,22 +9,24 @@ body {
   font-family: Arial, sans-serif;
 }
 
-nav {
+.container {
+  width: 100%;
+  /* justify-content: space-between; */
+  /* align-items: center; */
   background-color: #333;
   overflow: hidden;
-  font-size: 24px;
+  /* font-size: 16px; */
+  padding: 10px;
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0px 10px 12px;
+.content {
+  float: left;
+  /* background-color: yellow; */
 }
 
 .nome {
   color: #ff8142;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   min-width: 250px;
   cursor: pointer;
@@ -36,26 +38,39 @@ nav {
   /* font-weight: bold; */
 }
 
-.nav-links a {
+.bottoni {
+  /* background-color: green; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px 0px 0px;
+  font-size: 16px;
+}
+
+.bottoni a {
   color: #fff;
   text-decoration: none;
   display: inline-block;
-  font-size: 20px;
   padding: 0px 30px;
 }
 
-.nav-links a:hover,
+.bottoni a:hover,
 .dropdown:hover .dropbtn {
   color: #ff8142;
   /* background-color: #575757; */
 }
 
+.testo {
+  padding: 10px;
+  clear: both;
+}
+
 .dropdown {
   display: inline-block;
+  font-size: 16px;
 }
 
 .dropbtn {
-  font-size: 20px;
+  font-size: 16px;
   background-color: #333;
   color: white;
   padding: 0px 0px;
@@ -73,7 +88,7 @@ nav {
 }
 
 .dropdown-content a {
-  font-size: 17px;
+  font-size: 16px;
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -89,33 +104,26 @@ nav {
   display: block;
 }
 
-.responsive {
-  display: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: white;
-}
-
-.content {
-  padding: 10px;
-}
-
-/* Responsive styling */
-@media screen and (max-width: 768px) {
-  .nav-links {
-    /* display: none;
-    width: 100%; */
-    margin: 0;
-    padding: 0;
+/* Responsive styling
+@media only screen and (min-width: 768px) {
+  .bottoni {
+    margin: 30;
+    padding: 30;
+    font-size: 22;
   }
+}
+*/
 
-  /* .nav-links a,
-  .dropdown {
-    display: block;
-    text-align: center;
-  } */
+/* If the screen size is 601px or more, set the font-size of <div> to 80px */
+@media only screen and (min-width: 501px) {
+  div.bottoni div.dropdown {
+    font-size: 16px;
+  }
+}
 
-  .menu-icon {
-    display: block;
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 500px) {
+  div.bottoni div.dropdown {
+    font-size: 22px;
   }
 }
