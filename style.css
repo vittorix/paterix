@@ -10,10 +10,6 @@ body {
   background-color: #333;
 }
 
-.spaced-10px {
-  padding: 10px;
-}
-
 h1,
 h2,
 p {
@@ -120,6 +116,28 @@ p {
 
 .resume:hover .resume-items {
   display: block;
+}
+
+.spaced-10px {
+  padding: 10px;
+}
+
+.my-picture {
+  position: relative;
+  text-align: left;
+  color: white;
+}
+
+#my-pic {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
+.my-pic-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 @media only screen and (max-width: 450px) {
