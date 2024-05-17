@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vittorio Paternostro - Software Engineer</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="style_general.css" />
+    <link rel="stylesheet" href="style_classes.css" />
+    <link rel="stylesheet" href="style_ids.css" />
+    <link rel="stylesheet" href="style_media_queries.css" />
+    <!-- <script type="module" src="index.js"></script> -->
   </head>
   <body>
     <div class="nav-header">
@@ -67,10 +71,10 @@
         <input type="hidden" name="form_id" value="488b78e7" />
         <table>
           <tr>
-            <th class="spaced-10px">Name&nbsp;&nbsp;</th>
+            <th class="spaced-10px align-r">Name&nbsp;&nbsp;</th>
             <td>
               <input type="hidden" name="input_0" value="Name" /><input
-                style="width: 60vw; max-width: 650px; padding: 4px"
+                class="contact-input"
                 type="text"
                 value=""
                 name="input_0"
@@ -78,10 +82,10 @@
             </td>
           </tr>
           <tr>
-            <th class="spaced-10px">Email&nbsp;&nbsp;</th>
+            <th class="spaced-10px align-r">Email&nbsp;&nbsp;</th>
             <td>
               <input type="hidden" name="input_1" value="Email" /><input
-                style="width: 60vw; max-width: 650px; padding: 4px"
+                class="contact-input"
                 type="text"
                 value=""
                 name="input_1"
@@ -89,10 +93,10 @@
             </td>
           </tr>
           <tr>
-            <th class="spaced-10px">City&nbsp;&nbsp;</th>
+            <th class="spaced-10px align-r">Phone&nbsp;&nbsp;</th>
             <td>
-              <input type="hidden" name="input_2" value="City" /><input
-                style="width: 60vw; max-width: 650px; padding: 4px"
+              <input type="hidden" name="input_2" value="Phone" /><input
+                class="contact-input"
                 type="text"
                 value=""
                 name="input_2"
@@ -100,7 +104,7 @@
             </td>
           </tr>
           <tr>
-            <th class="spaced-10px">Message&nbsp;&nbsp;</th>
+            <th class="spaced-10px align-r">Message&nbsp;&nbsp;</th>
             <td>
               <br />
               <input type="hidden" name="input_3" value="Message" /><textarea
@@ -110,6 +114,7 @@
                   max-width: 650px;
                   max-height: 180px;
                   padding: 4px;
+                  border-radius: 4px;
                 "
                 name="input_3"
               ></textarea>

@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vittorio Paternostro - Software Engineer</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="style_general.css" />
+    <link rel="stylesheet" href="style_classes.css" />
+    <link rel="stylesheet" href="style_ids.css" />
+    <link rel="stylesheet" href="style_media_queries.css" />
+    <script type="module" src="index.js"></script>
   </head>
   <body>
     <div class="nav-header">
@@ -47,24 +51,33 @@
       </div>
     </div>
     <div class="page-content">
-      <div class="my-picture">
-        <div class="my-pic-text">
-          <h2>Enjoying work</h2>
-          <h3>Lead Engineer - Chicago 2016</h3>
-        </div>
-        <img id="my-pic" src="vittorio_at_work.jpg" width: 1100px; height:
-        583px; alt="Vittorio at work as Lead Engineer at Epsilon" />
-      </div>
+      <h3>Objective</h3>
       <p>
         High quality software engineering in a company where cooperation and
         growth are critical to success.
       </p>
-      <h2>Objectives</h2>
-      <p>
-        leadership leadership <a href="index.html">Home</a>
-        <a href="career.html">Career</a>leadership leadership leadership
-        leadership leadership leadership
-      </p>
-    </div>
+      <p id="numFoto"></p>
+      <div class="slider-container">
+        <div class="slider">
+          <button class="btn prev">&#10094;</button>
+          <img
+            src="./images/vittorio_at_work.jpg"
+            alt="Vittorio Paternostro Lead Engineer Chicago 2016 at Epsilon.com"
+            class="image"
+          />
+          <button class="btn next">&#10095;</button>
+        </div>
+        <div class="description">i1.jpg</div>
+      </div>
+
+      <!-- <div class="my-picture">
+        <div class="my-pic-text">
+          <p class="text-big">Enjoying work</p>
+          <h2>Lead Engineer - Chicago 2016</h2>
+        </div>
+        <img id="my-pic" src="./images/vittorio_at_work.jpg" width: 1100px;
+        height: 583px; alt="Vittorio at work as Lead Engineer at Epsilon" />
+      </div> -->
+    </p>
   </body>
 </html>
