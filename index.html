@@ -6,6 +6,8 @@
     <title>Vittorio Paternostro - Software Engineer</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="style_general.css" />
+    <link rel="stylesheet" href="header_footer.css" />
+    <link rel="stylesheet" href="slider.css" />
     <link rel="stylesheet" href="style_classes.css" />
     <link rel="stylesheet" href="style_ids.css" />
     <link rel="stylesheet" href="style_media_queries.css" />
@@ -51,14 +53,17 @@
       </div>
     </div>
     <div class="page-content">
-      <h3>Objective</h3>
-      <p>
-        High quality software engineering in a company where cooperation and
-        growth are critical to success.
-      </p>
-      <p id="numFoto"></p>
       <div class="slider-container">
-        <div class="slider">
+        <span style="text-align: left"> </span>
+      </div>
+      <div class="slider-container">
+        <div class="slider my-picture">
+          <div class="my-pic-text radius-4px">
+            <p id="my-pic-text-head" class="text-big radius-4px padding-10px">
+              Enjoying work
+            </p>
+            <!-- <h2>Lead Engineer - Chicago 2016</h2> -->
+          </div>
           <button class="btn prev">&#10094;</button>
           <img
             src="./images/vittorio_at_work.jpg"
@@ -67,17 +72,25 @@
           />
           <button class="btn next">&#10095;</button>
         </div>
-        <div class="description">i1.jpg</div>
+        <div class="description">I love software engineering</div>
       </div>
-
-      <!-- <div class="my-picture">
-        <div class="my-pic-text">
+    </div>
+    <br />
+    <p style="text-align: center; color: white">
+      High quality software engineering
+      <span class="orange"> &rsaquo; </span> Cooperation
+      <span class="orange"> &rsaquo; </span> Growth
+      <span class="orange"> &rsaquo; </span> Success
+      <!-- High quality software engineering in a company where cooperation and
+            growth are critical to success. -->
+    </p>
+    <!-- <div class="my-picture"> -->
+    <!-- <div class="my-pic-text">
           <p class="text-big">Enjoying work</p>
           <h2>Lead Engineer - Chicago 2016</h2>
-        </div>
-        <img id="my-pic" src="./images/vittorio_at_work.jpg" width: 1100px;
-        height: 583px; alt="Vittorio at work as Lead Engineer at Epsilon" />
-      </div> -->
-    </p>
+        </div> -->
+    <!-- <img id="my-pic" src="./images/vittorio_at_work.jpg" width: 1100px; -->
+    <!-- height: 583px; alt="Vittorio at work as Lead Engineer at Epsilon" /> -->
+    <!-- </div> -->
   </body>
 </html>

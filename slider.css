@@ -1,0 +1,55 @@
+/* =========================== image slider ============================= */
+.slider-container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+  font-family: Arial, sans-serif;
+  padding: 5px;
+}
+
+.slider {
+  max-width: 800px;
+  max-height: 400px;
+  position: relative;
+  /* width: 90%; */
+}
+
+.image {
+  width: 100%;
+  /* width: 800px; */
+  /* height: auto; */
+  max-width: 800px;
+  max-height: 400px;
+
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  user-select: none;
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}

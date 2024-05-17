@@ -14,4 +14,9 @@ h1,
 h2,
 p {
   margin-bottom: 5px;
+  /* font-size: 1em; */
+}
+
+img {
+  border-radius: 4px;
 }
