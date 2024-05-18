@@ -15,13 +15,13 @@
 }
 
 .skills {
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
 }
 
 .skill {
   background-color: #8f73733c;
-  width: 250px;
+  width: 220px;
   border-radius: 10px;
   padding: 15px;
   line-height: 1.4em;
