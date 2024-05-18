@@ -7,7 +7,7 @@
   align-items: center;
   background-color: bisque;
   font-family: Arial, sans-serif;
-  padding: 5px;
+  /* padding: 5px; */
 }
 
 .slider {
@@ -15,6 +15,20 @@
   max-height: 583px;
   position: relative;
   width: 100%;
+}
+
+.description {
+  max-width: 1100px;
+  max-height: 583px;
+  position: relative;
+  width: 100%;
+
+  padding: 10px;
+  font-size: 18px;
+  background-color: #333;
+  color: #ff8142;
+  text-align: center;
+  border-radius: 4px;
 }
 
 .my-picture {
