@@ -14,67 +14,75 @@
     <script type="module" src="index.js"></script>
   </head>
   <body>
-    <div class="nav-header">
-      <div
-        id="my-name"
-        class="nav-content"
-        onclick="window.location.href='index.html'"
-      >
-        Vittorio Paternostro
-        <div class="my-job">software engineer</div>
+    <div>
+      <div class="nav-header">
+        <div
+          id="my-name"
+          class="nav-content"
+          onclick="window.location.href='index.html'"
+        >
+          Vittorio Paternostro
+          <div class="my-job">software engineer</div>
+        </div>
+
+        <div class="buttons">
+          <a href="index.html">Home</a>
+          <a href="career.html">Career</a>
+          <a id="contact" href="contact.html">Contact</a>
+          <div class="resume">
+            <button class="resume-button">
+              Resume<span style="font-size: 0.6em">&nbsp;&#9660;</span>
+            </button>
+            <div class="resume-items">
+              <a href="#short-resume"
+                ><img
+                  src="./images/PDF_file_icon.svg"
+                  alt="PDF"
+                  style="height: 1.2em"
+                />&nbsp;1 Page</a
+              >
+              <br />
+              <a href="#long-resume"
+                ><img
+                  src="./images/PDF_file_icon.svg"
+                  alt="PDF"
+                  style="height: 1.2em"
+                />&nbsp;4 Pages</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="buttons">
-        <a href="index.html">Home</a>
-        <a href="career.html">Career</a>
-        <a id="contact" href="contact.html">Contact</a>
-        <div class="resume">
-          <button class="resume-button">
-            Resume<span style="font-size: 0.6em">&nbsp;&#9660;</span>
-          </button>
-          <div class="resume-items">
-            <a href="#short-resume"
-              ><img
-                src="./images/PDF_file_icon.svg"
-                alt="PDF"
-                style="height: 1.2em"
-              />&nbsp;1 Page</a
-            >
-            <br />
-            <a href="#long-resume"
-              ><img
-                src="./images/PDF_file_icon.svg"
-                alt="PDF"
-                style="height: 1.2em"
-              />&nbsp;4 Pages</a
-            >
+      <div class="page-content">
+        <div class="slider-container">
+          <div class="slider my-picture">
+            <div class="my-pic-text radius-4px">
+              <h3
+                id="my-pic-text-role"
+                class="my-pic-text-head radius-4px"
+              ></h3>
+              <span id="my-pic-text-company" class="radius-4px"></span>
+              <span id="my-pic-text-city" class="radius-4px"></span>
+              <span id="my-pic-text-additional" class="radius-4px"></span>
+            </div>
+            <button class="btn prev">&#10094;</button>
+            <img
+              src="./images/vittorio_at_work.jpg"
+              alt="Vittorio Paternostro Lead Engineer Chicago 2016 at Epsilon.com"
+              class="image"
+            />
+            <button class="btn next">&#10095;</button>
           </div>
+          <div class="description">I love software engineering</div>
         </div>
       </div>
     </div>
 
-    <div class="page-content">
-      <div class="slider-container">
-        <div class="slider my-picture">
-          <div class="my-pic-text radius-4px">
-            <h3 id="my-pic-text-role" class="my-pic-text-head radius-4px"></h3>
-            <span id="my-pic-text-company" class="radius-4px"></span>
-            <span id="my-pic-text-city" class="radius-4px"></span>
-            <span id="my-pic-text-additional" class="radius-4px"></span>
-          </div>
-          <button class="btn prev">&#10094;</button>
-          <img
-            src="./images/vittorio_at_work.jpg"
-            alt="Vittorio Paternostro Lead Engineer Chicago 2016 at Epsilon.com"
-            class="image"
-          />
-          <button class="btn next">&#10095;</button>
-        </div>
-        <div class="description">I love software engineering</div>
-      </div>
-    </div>
-
-    <div class="padded-page-content">
+    <div
+      class="page-content"
+      style="max-width: 1100px; margin: auto; margin-top: 20px"
+    >
       <h2>Skills</h2>
       <h4 class="padded-5px">
         Building and leading agile teams for web and desktop applications.
@@ -108,14 +116,20 @@
         course having fun with my adorable son.
       </p>
     </div>
-    <div>
-      <p style="background-color: #333; text-align: center; color: white">
+    <div class="footer-head">
+      <p>
         High quality software engineering
         <span class="orange"> &rsaquo; </span> Cooperation
         <span class="orange"> &rsaquo; </span> Growth
         <span class="orange"> &rsaquo; </span> Success
         <!-- High quality software engineering in a company where cooperation and
           growth are critical to success. -->
+      </p>
+    </div>
+    <div class="footer">
+      <p style="text-align: center">
+        © 2024
+        <a href="mailto:vittoriopaternostro@gmail.com">Vittorio Paternostro</a>
       </p>
     </div>
   </body>

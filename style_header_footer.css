@@ -8,6 +8,13 @@
   float: left;
 }
 
+.footer-head {
+  background-color: #333;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
 .footer {
   background-color: #333;
   overflow: hidden;
