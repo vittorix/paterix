@@ -8,6 +8,26 @@
   padding: 20px;
 }
 
+.page-center {
+  max-width: 1100px;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.skills {
+  max-width: 900px;
+  margin: auto;
+}
+
+.skill {
+  background-color: #8f73733c;
+  width: 250px;
+  border-radius: 10px;
+  padding: 15px;
+  line-height: 1.4em;
+  margin: 10px;
+}
+
 .align-r {
   text-align: right;
 }
