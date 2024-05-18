@@ -1,7 +1,11 @@
-.page-content {
+.page-content,
+.padded-page-content {
   clear: both;
-  padding: 20px;
   background-color: bisque;
+}
+
+.padded-page-content {
+  padding: 20px;
 }
 
 .align-r {
@@ -12,7 +16,7 @@
   padding: 5px;
 }
 
-.spaced-10px {
+.padded-10px {
   padding: 10px;
 }
 
@@ -26,26 +30,6 @@
   padding: 4px;
   border-radius: 4px;
   border-width: thin;
-}
-
-.text-big {
-  font-family: "Arial Narrow", Arial, sans-serif;
-  font-size: 3vh;
-  font-stretch: condensed;
-  font-weight: bold;
-}
-
-.my-picture {
-  position: relative;
-  text-align: left;
-  color: white;
-}
-
-.my-pic-text {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background-color: #33333389;
 }
 
 .padding-10px {
