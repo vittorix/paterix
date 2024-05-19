@@ -32,6 +32,29 @@
   padding: 10px;
 }
 
+#detailed-resume img {
+  float: right;
+}
+
+#detailed-resume {
+  font-size: 14px;
+  width: 100px;
+  color: #333333ee;
+  /* background-color: aqua; */
+}
+
+#detailed-resume a {
+  color: #333333ee;
+
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#detailed-resume:hover a {
+  color: #ff8142;
+  cursor: pointer;
+}
+
 .experience {
   width: 800px;
   line-height: 1.4em;
