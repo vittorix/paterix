@@ -1,0 +1,40 @@
+.career-buttons {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  column-gap: 2vw;
+  row-gap: 10px;
+}
+
+.career-buttons a {
+  background-color: #333333ee;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+  padding: 6px;
+  text-decoration: none;
+  font-size: 24;
+  color: white;
+}
+.career-buttons a:hover {
+  color: #ff8142;
+}
+
+.careers {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: column wrap;
+  padding: 30px 15px 30px 15px;
+  row-gap: 30px;
+}
+
+.experience {
+  width: 800px;
+  line-height: 1.4em;
+}
