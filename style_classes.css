@@ -33,10 +33,13 @@
   line-height: 1.4em;
 }
 
-.about-me{
-  font-size: 22; 
+.about-me {
+  /* font-size: 22; */
   margin-top: 30px;
-  line-height: 1.3em"
+  line-height: 1.3em;
+  background-color: #33333315;
+  border-radius: 10px;
+  padding: 30px 15px 15px 15px;
 }
 
 .align-r {
