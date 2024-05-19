@@ -6,8 +6,9 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  column-gap: 2vw;
+  column-gap: 3vw;
   row-gap: 10px;
+  font-size: 18px;
 }
 
 .career-buttons a {
@@ -15,26 +16,30 @@
   border-radius: 8px;
   display: inline-block;
   text-align: center;
-  padding: 6px;
+  padding: 8px;
   text-decoration: none;
-  font-size: 24;
   color: white;
 }
 .career-buttons a:hover {
   color: #ff8142;
 }
 
-.careers {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow: column wrap;
-  padding: 30px 15px 30px 15px;
-  row-gap: 30px;
+.career-section {
+  max-width: 1000px;
+  margin: 30px;
+  background-color: #33333315;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .experience {
   width: 800px;
   line-height: 1.4em;
+}
+
+#experience-resume {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  font-size: 16px;
 }

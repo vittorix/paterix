@@ -27,3 +27,9 @@ img {
   border-width: thin;
   width: 70px;
 }
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #33333350;
+}
