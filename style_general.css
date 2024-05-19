@@ -20,3 +20,10 @@ p {
 img {
   border-radius: 4px;
 }
+
+.submitBtn {
+  padding: 5px;
+  border-radius: 5px;
+  border-width: thin;
+  width: 70px;
+}
