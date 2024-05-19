@@ -37,8 +37,9 @@
 }
 
 #detailed-resume {
-  font-size: 14px;
-  width: 100px;
+  font-size: 13px;
+  font-weight: bold;
+  width: 138px;
   color: #333333ee;
   /* background-color: aqua; */
 }
