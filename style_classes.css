@@ -34,12 +34,24 @@
 }
 
 .about-me {
-  /* font-size: 22; */
   margin-top: 30px;
   line-height: 1.3em;
+}
+
+.text-light-backg {
   background-color: #33333315;
   border-radius: 10px;
-  padding: 30px 15px 15px 15px;
+  padding: 15px 15px 15px 15px;
+}
+
+.contacts {
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: column wrap;
+  padding: 10px 15px 30px 15px;
+  row-gap: 30px;
 }
 
 .align-r {
