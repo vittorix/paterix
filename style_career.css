@@ -20,6 +20,7 @@
   text-decoration: none;
   color: white;
 }
+
 .career-buttons a:hover {
   color: #ff8142;
 }
@@ -31,6 +32,25 @@
   border-radius: 10px;
   padding: 20px;
   line-height: 1.4em;
+}
+
+.career-head {
+  width: fit-content;
+  margin-top: 7px;
+  margin-bottom: 20px;
+}
+
+.career-head a {
+  background-color: #333333ee;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+}
+
+.career-head a:hover {
+  color: #ff8142;
 }
 
 #detailed-resume img {

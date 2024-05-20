@@ -15,7 +15,7 @@
     <script type="module" src="career.js"></script>
   </head>
   <body>
-    <div class="nav-header">
+    <div id="top" class="nav-header">
       <div
         id="my-name"
         class="nav-content"
@@ -56,39 +56,63 @@
 
     <div class="career-buttons">
       <a href="#objectives">Objectives</a>
-      <a href="#experience">Experience</a>
       <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#translations">Translations</a>
       <a href="#other">Other Info</a>
     </div>
 
     <div style="max-width: 1100px; margin: auto">
       <div id="objectives" class="career-section">
-        <h2 style="padding: 10px 0px">Objectives</h2>
-        <p>
-          <strong>High quality software engineering</strong> in a company where
-          cooperation and growth are critical to success.
-        </p>
-        <p>
-          Use my <strong> full stack experience</strong> and my knowledge of the
-          <strong>whole development life cycle</strong>.
-        </p>
-        <p>
-          Implement clean code and best practice for
-          <strong>code that's easy to read, maintain, test, and scale</strong>.
-        </p>
-        <p>
-          Strong passion for <strong>pleasing customers</strong> and
-          <strong>problem solving </strong>through trust, cooperation,
-          enthusiasm, values, and <strong>focus on results</strong>.
-        </p>
+        <div class="career-head"><a href="#top">Objectives</a></div>
+        <h3 style="font-size: 1.17em; padding: 3px 0px 7px 0px">
+          <u>High quality software engineering</u> in a company where
+          <u>cooperation and growth</u> are critical to <u>success</u>.
+        </h3>
+        <ul style="padding-left: 15px">
+          <li>
+            Use my <strong> full stack experience</strong> and my knowledge of
+            the <strong>whole development life cycle</strong>.
+          </li>
+          <li>
+            Implement clean code and best practice for
+            <strong>code that's easy to read, maintain, test, and scale</strong
+            >.
+          </li>
+          <li>
+            Strong passion for <strong>pleasing customers</strong> and
+            <strong>problem solving </strong>through trust, cooperation,
+            enthusiasm, values, and <strong>focus on results</strong>.
+          </li>
+          <li>
+            Looking for <strong>on-site or remote software engineering</strong>,
+            or other opportunities.
+          </li>
+        </ul>
       </div>
+
+      <div id="education" class="career-section">
+        <div class="career-head"><a href="#top">Education</a></div>
+        <div>
+          <h3>Bachelor of Science in Computer Science</h3>
+          <p style="padding-top: 10px">
+            <strong>Depaul University</strong>
+          </p>
+          <h5>Chicago, Il</h5>
+          <h5 style="padding-bottom: 15px">2006 - 2008</h5>
+          <ul style="padding-left: 15px">
+            <li>Highest Honors / Summa Cum laude</li>
+            <li>Winner of the Top of the Senior Class award</li>
+            <li>Member of the Dean’s list</li>
+            <li>GPA 3.9 / 4.0</li>
+          </ul>
+        </div>
+      </div>
+
       <div id="experience" class="career-section">
         <div id="experience-resume">
           <div>
-            <h2>Experience</h2>
+            <div class="career-head"><a href="#top">Experience</a></div>
           </div>
 
           <!-- ------- -->
@@ -368,55 +392,68 @@
         </div>
       </div>
 
-      <div id="education" class="career-section">
-        <h2>Education</h2>
+      <div id="skills" class="career-section">
+        <div class="career-head"><a href="#top">Skills</a></div>
         <div>
-          <h3>Bachelor of Science in Computer Science</h3>
+          <h3>Core competencies</h3>
           <p style="padding-top: 10px">
-            <strong>Depaul University</strong>
+            <strong>Methodologies</strong>
           </p>
-          <h5>Chicago, Il</h5>
-          <h5 style="padding-bottom: 15px">2006 - 2008</h5>
           <ul style="padding-left: 15px">
-            <li>Highest Honors / Summa Cum laude</li>
-            <li>Winner of the Top of the Senior Class award</li>
-            <li>Member of the Dean’s list</li>
-            <li>GPA 3.9 / 4.0</li>
+            <li>
+              Functional programming, object oriented programming and design,
+              RESTful web services, agile development (Scrum, Lean, Continuous
+              Delivery), test driven development, automated full stack testing,
+              UX, graphic user interfaces.
+            </li>
+          </ul>
+          <p style="padding-top: 10px">
+            <strong>Frameworks</strong>
+          </p>
+          <ul style="padding-left: 15px">
+            <li>
+              MERN stack (MongoDb, Express, React JS, Node JS). Angular,
+              Couchbase, Mocha, Karma, Protractor, Npm, Bower, GWT (Google Web
+              Toolkit), SmartGWT, ArcGIS, ArcObjects, JDBC, JSON, XML, Windows
+              Forms, MVC (Model View Controller), MVP (Model View Presenter),
+              RPC (Remote Procedure Calls), SOAP, J2EE/JEE, Junits, RDBMS,
+              Oracle PL/SQL, Postgres, RDBMS, LDAP active directory, AJAX.
+            </li>
+          </ul>
+          <p style="padding-top: 10px">
+            <strong>Languages</strong>
+          </p>
+          <ul style="padding-left: 15px">
+            <li>
+              JavaScript, Java, C#, HTML, CSS, SQL. Currently learning React and
+              Python.
+            </li>
+          </ul>
+          <p style="padding-top: 10px">
+            <strong>Tools</strong>
+          </p>
+          <ul style="padding-left: 15px">
+            <li>
+              Git, SVN, Docker, ClearCase, Maven, Tomcat, IntelliJ, Visual
+              Studio, Eclipse, Selenium, QuickTest Pro, Jira, Bamboo, Toad, Sql
+              Developer.
+            </li>
           </ul>
         </div>
       </div>
 
-      <div id="skills" class="career-section">
-        <h2>Skills</h2>
+      <div id="other" class="career-section">
+        <div class="career-head"><a href="#top">Other info</a></div>
+        <p>Italian and American Citizen.</p>
+        <p>
+          Looking for regular and remote software engineering or other
+          opportunities.
+        </p>
+        <p>
+          I designed and built this web site from scratch, with
+          HTML/CSS/JavaScript.
+        </p>
       </div>
-    </div>
-    <br />
-    <br />
-
-    <div id="teaching" class="career-section">
-      <h3 style="padding: 10px 0px">Translating, Interpreting</h3>
-      <p>
-        I love teaching software, science, and languages. I also enjoy being an
-        interpreter and a tourist guide.
-      </p>
-    </div>
-
-    <div id="translations" class="career-section">
-      <h3 style="padding: 10px 0px">Teaching</h3>
-      <p>
-        18+ years of translating from English to Italian and vice-versa for
-        governments, aerospace, military, business, law, medical, and
-        individuals.
-      </p>
-    </div>
-
-    <div id="other" class="career-section">
-      <h3 style="padding: 10px 0px">Other info</h3>
-      <p>Italian and American Citizen.</p>
-      <p>
-        I designed and built this web site from scratch, with
-        HTML/CSS/JavaScript.
-      </p>
     </div>
 
     <div class="footer-head">
