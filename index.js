@@ -86,7 +86,7 @@ function updateImage(n) {
   sliderRole.innerHTML = images[n].role;
   sliderCompany.innerHTML = images[n].company;
   sliderCity.innerHTML = images[n].city;
-  sliderAdditional.innerHTML = images[n].additional;
+  sliderAdditional.innerHTML = images[n].additional || "";
   descriptionElement.textContent = images[n].description;
 }
 
