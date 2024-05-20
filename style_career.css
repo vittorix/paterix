@@ -29,7 +29,8 @@
   margin: 30px;
   background-color: #33333315;
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
+  line-height: 1.4em;
 }
 
 #detailed-resume img {
