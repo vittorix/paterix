@@ -67,67 +67,89 @@
         </p>
       </div>
       <div class="padded-page-content text-light-backg">
-        <h2>Message Me</h2>
-        <form method="post">
-          <input type="hidden" name="form_id" value="488b78e7" />
-          <table>
-            <tr>
-              <th class="padded-10px align-r">Name&nbsp;&nbsp;</th>
-              <td>
-                <input type="hidden" name="input_0" value="Name" /><input
-                  class="contact-input"
-                  type="text"
-                  value=""
-                  name="input_0"
-                />
-              </td>
-            </tr>
-            <tr>
-              <th class="padded-10px align-r">Email&nbsp;&nbsp;</th>
-              <td>
-                <input type="hidden" name="input_1" value="Email" /><input
-                  class="contact-input"
-                  type="text"
-                  value=""
-                  name="input_1"
-                />
-              </td>
-            </tr>
-            <tr>
-              <th class="padded-10px align-r">Phone&nbsp;&nbsp;</th>
-              <td>
-                <input type="hidden" name="input_2" value="Phone" /><input
-                  class="contact-input"
-                  type="text"
-                  value=""
-                  name="input_2"
-                />
-              </td>
-            </tr>
-            <tr>
-              <th class="padded-10px align-r">Message&nbsp;&nbsp;</th>
-              <td>
-                <br />
-                <input type="hidden" name="input_3" value="Message" /><textarea
-                  style="
-                    width: 60vw;
-                    height: 30vh;
-                    max-width: 650px;
-                    max-height: 180px;
-                    padding: 4px;
-                    border-radius: 4px;
-                  "
-                  name="input_3"
-                ></textarea>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2" style="text-align: right; padding-top: 5px">
-                <button type="submit" class="submitBtn">Submit</button>
-              </td>
-            </tr>
-          </table>
-        </form>
+        <p>
+          If you have knowledge of a position that could fit my profile (see the
+          <a href="./career.html">Career</a> page), please don't esitate to
+          contact me.
+        </p>
+      </div>
+
+      <!--  -->
+      <!-- TODO: temporarly hiding the form to send a message since it's not implemented yet -->
+      <!--  -->
+      <div style="display: none">
+        <div class="padded-page-content text-light-backg">
+          <h2>Message Me</h2>
+          <form method="post">
+            <input
+              type="hidden"
+              action="mailto:emailid@example.com"
+              method="post"
+              enctype="text/plain"
+            />
+            <table>
+              <tr>
+                <th class="padded-10px align-r">Name&nbsp;&nbsp;</th>
+                <td>
+                  <input type="hidden" name="input_0" value="Name" /><input
+                    class="contact-input"
+                    type="text"
+                    value=""
+                    name="input_0"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th class="padded-10px align-r">Email&nbsp;&nbsp;</th>
+                <td>
+                  <input type="hidden" name="input_1" value="Email" /><input
+                    class="contact-input"
+                    type="text"
+                    value=""
+                    name="input_1"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th class="padded-10px align-r">Phone&nbsp;&nbsp;</th>
+                <td>
+                  <input type="hidden" name="input_2" value="Phone" /><input
+                    class="contact-input"
+                    type="text"
+                    value=""
+                    name="input_2"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th class="padded-10px align-r">Message&nbsp;&nbsp;</th>
+                <td>
+                  <br />
+                  <input
+                    type="hidden"
+                    name="input_3"
+                    value="Message"
+                  /><textarea
+                    style="
+                      width: 60vw;
+                      height: 30vh;
+                      max-width: 650px;
+                      max-height: 180px;
+                      padding: 4px;
+                      border-radius: 4px;
+                    "
+                    name="input_3"
+                  ></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" style="text-align: right; padding-top: 5px">
+                  <button type="submit" class="submitBtn">Submit</button>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
       </div>
     </div>
 
