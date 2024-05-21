@@ -36,6 +36,7 @@
 
 .career-head {
   width: fit-content;
+  min-width: 100px;
   margin-top: 7px;
   margin-bottom: 20px;
 }
