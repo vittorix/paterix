@@ -35,13 +35,13 @@
 }
 
 .career-head {
-  width: fit-content;
-  min-width: 120px;
   margin-top: 7px;
   margin-bottom: 20px;
 }
 
 .career-head a {
+  min-width: 120px;
+  white-space: nowrap;
   background-color: #333333ee;
   border-radius: 10px;
   padding: 10px;
