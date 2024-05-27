@@ -1,0 +1,44 @@
+@media only screen and (max-width: 450px) {
+  .buttons {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 451px) {
+  .buttons {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 530px) {
+  .buttons {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 680px) {
+  .buttons {
+    width: 60%;
+  }
+}
+
+/* Medium devices (lanscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .buttons {
+    justify-content: space-around;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .buttons {
+    justify-content: space-around;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .buttons {
+    width: 59%;
+  }
+}

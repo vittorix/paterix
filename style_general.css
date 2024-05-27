@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Arial, sans-serif;
+  background-color: bisque;
+}
+
+h1,
+h2,
+p {
+  margin-bottom: 5px;
+  /* font-size: 1em; */
+}
+
+img {
+  border-radius: 4px;
+}
+
+.submitBtn {
+  padding: 5px;
+  border-radius: 5px;
+  border-width: thin;
+  width: 70px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #33333350;
+  margin: 20px 0px;
+}
+
+li {
+  padding: 3px 0px;
+
+  /* list-style: "- "; */
+}

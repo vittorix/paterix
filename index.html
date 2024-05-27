@@ -3,46 +3,161 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paterix</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="index.js" type="module"></script>
+    <title>Vittorio Paternostro - Software Engineer</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="style_general.css" />
+    <link rel="stylesheet" href="style_header_footer.css" />
+    <link rel="stylesheet" href="style_slider.css" />
+    <link rel="stylesheet" href="style_classes.css" />
+    <link rel="stylesheet" href="style_ids.css" />
+    <link rel="stylesheet" href="style_media_queries.css" />
+    <script type="module" src="index.js"></script>
   </head>
   <body>
-    <div class="nav_header">
-      <div
-        class="my_name nav_content"
-        onclick="window.location.href='index.html'"
-      >
-        Vittorio Paternostro
-        <div class="my_job">software engineer</div>
-      </div>
-      <div class="buttons nav_content" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="career.html">Career</a>
-        <div class="dropdown">
-          <button class="dropbtn">
-            Resume
-            <i class="arrow down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#short-resume">Short Resume (1 Page)</a>
-            <a href="#long-resume">Long Resume (4 Pages)</a>
+    <div>
+      <div class="nav-header">
+        <div
+          id="my-name"
+          class="nav-content"
+          onclick="window.location.href='index.html'"
+        >
+          Vittorio Paternostro
+          <div class="my-job">software engineer</div>
+        </div>
+
+        <div class="buttons">
+          <a href="index.html">Home</a>
+          <a href="career.html">Career</a>
+          <a id="contact" href="contact.html">Contact</a>
+          <div class="resume">
+            <button class="resume-button">
+              Resume<span style="font-size: 0.6em">&nbsp;&#9660;</span>
+            </button>
+            <div class="resume-items">
+              <a
+                title="PDF resume in 1 page"
+                download="./resume_vittorio_paternostro_2024_1page.pdf"
+                href="./resume_vittorio_paternostro_2024_1page.pdf"
+                ><img
+                  src="./images/PDF_file_icon.svg"
+                  alt="PDF"
+                  style="height: 1.2em"
+                />&nbsp;1 Page</a
+              >
+              <br />
+              <a
+                title="PDF resume in 3 pages"
+                download="./resume_vittorio_paternostro_2024_3pages.pdf"
+                href="./resume_vittorio_paternostro_2024_3pages.pdf"
+                ><img
+                  src="./images/PDF_file_icon.svg"
+                  alt="PDF"
+                  style="height: 1.2em"
+                />&nbsp;3 Pages</a
+              >
+            </div>
           </div>
         </div>
-        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="page-content">
+        <div class="slider-container">
+          <div class="slider my-picture">
+            <div class="my-pic-text radius-4px">
+              <h3
+                id="my-pic-text-role"
+                class="my-pic-text-head radius-4px"
+              ></h3>
+              <div id="my-pic-text-company" class="radius-4px"></div>
+              <div id="my-pic-text-city" class="radius-4px"></div>
+              <div id="my-pic-text-additional" class="radius-4px"></div>
+            </div>
+            <button class="btn prev">&#10094;</button>
+            <img
+              src="./images/vittorio_at_work.jpg"
+              alt="Vittorio Paternostro Lead Engineer Chicago 2016 at Epsilon.com"
+              class="image"
+            />
+            <button class="btn next">&#10095;</button>
+          </div>
+          <div class="description">I love software engineering</div>
+        </div>
       </div>
     </div>
-    <div class="testo">
-      <h2>OBJECTIVES</h2>
+
+    <div class="page-content page-center">
+      <div class="skills">
+        <p class="skill">
+          Building and leading agile teams for web and desktop applications
+        </p>
+        <p class="skill">Full stack senior software developer</p>
+        <p class="skill">Leveraging trust, passion, enthusiasm, and values</p>
+        <p class="skill">
+          Cooperating and building strong and long term relationships
+        </p>
+      </div>
+
+      <hr
+        style="margin: auto; margin-top: 30px; margin-bottom: 30px; width: 50%"
+      />
+      <div
+        class="text-light-backg"
+        style="margin-bottom: 30px; line-height: 1.4em"
+      >
+        <h1 class="padded-10px" style="text-align: center">About me</h1>
+        <p class="padded-10px">Passionate, determined, dependable.</p>
+        <p class="padded-10px">
+          I am both an Italian and an American citizen. I was born in Palermo,
+          Italy, where I started programming at 13yo and where I grew up,
+          studied, and worked for several companies. I also worked in Rome for
+          two years, before moving back to Palermo where I established my own IT
+          business, providing tailored services to delight my clients.
+        </p>
+        <p class="padded-10px">
+          In 2004 I moved to Chicago, Illinois, where I graduated with the
+          highest honors at Depaul University, became an American citizen, and
+          where I worked for top IT companies reaching the level of Lead
+          Engineer and leading a team of 9.
+        </p>
+        <p class="padded-10px">
+          In 2017 I moved to Melbourne, Florida, where I worked for General
+          Electric as a Senior Engineer.
+        </p>
+        <p class="padded-10px">
+          In my free time I love fishing, playing chess, reading, learning,
+          soccer, and most of all having fun with my two adorable kids.
+        </p>
+      </div>
+    </div>
+    <div class="footer-head">
       <p>
-        High quality software engineering in a company where cooperation and
-        growth are critical to success.
+        <span
+          title="Some quality principles: SOLID, high cohesion, loose coupling, interface segregation, separation of concern, you aren't gonna need it, avoid side effects, avoid code smells, avoid anti patterns, use design patterns, refactor as needed, automated testing, fail fast."
+        >
+          High quality software engineering
+        </span>
+        <span class="orange"> &rsaquo; </span>
+        <span
+          title="Interdependent people combine their own efforts with the efforts of others to achieve their greatest success. (Stephen Covey)"
+          >Cooperation</span
+        >
+        <span class="orange"> &rsaquo; </span>
+        <span
+          title="Enabling employees to grow and to continuously improve, favors company growth."
+          >Growth</span
+        >
+        <span class="orange"> &rsaquo; </span>
+        <span
+          title="Client satisfaction is the main component of company success. It is achievable through integrity, frequent interaction between client and team for continuous and fast feedback, and for building trust."
+        >
+          Success</span
+        >
       </p>
-      <h2>OTHER</h2>
-      <p>
-        leadership leadership <a href="index.html">Home</a>
-        <a href="career.html">Career</a>leadership leadership leadership
-        leadership leadership leadership
+    </div>
+    <div class="footer">
+      <p style="text-align: center">
+        © 2024
+        <a href="mailto:vittoriopaternostro@gmail.com">Vittorio Paternostro</a>
       </p>
     </div>
   </body>

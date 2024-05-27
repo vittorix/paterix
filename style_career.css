@@ -1,0 +1,92 @@
+.career-buttons {
+  max-width: 900px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  column-gap: 3vw;
+  row-gap: 10px;
+  font-size: 18px;
+}
+
+.career-buttons a {
+  background-color: #333333ee;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+.career-buttons a:hover {
+  color: #ff8142;
+}
+
+.career-section {
+  max-width: 1100px;
+  margin: 20px;
+  background-color: #33333315;
+  border-radius: 10px;
+  padding: 20px;
+  line-height: 1.4em;
+}
+
+.career-head {
+  margin-top: 7px;
+  margin-bottom: 20px;
+}
+
+.career-head a {
+  min-width: 120px;
+  white-space: nowrap;
+  background-color: #333333ee;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+}
+
+.career-head a:hover {
+  color: #ff8142;
+}
+
+#detailed-resume img {
+  float: right;
+}
+
+#detailed-resume {
+  font-size: 13px;
+  font-weight: bold;
+  width: 138px;
+  color: #333333ee;
+  /* background-color: aqua; */
+}
+
+#detailed-resume a {
+  color: #333333ee;
+
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#detailed-resume:hover a {
+  color: #ff8142;
+  cursor: pointer;
+}
+
+.experience {
+  width: 800px;
+  line-height: 1.4em;
+}
+
+#experience-resume {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  column-gap: 10px;
+  font-size: 16px;
+}

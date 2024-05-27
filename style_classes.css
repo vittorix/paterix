@@ -1,0 +1,79 @@
+.page-content,
+.padded-page-content {
+  clear: both;
+  background-color: bisque;
+}
+
+.padded-page-content {
+  padding: 20px;
+}
+
+.page-center {
+  max-width: 1100px;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.skills {
+  max-width: 1100px;
+  margin: auto;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  padding: 0px 15px 0px 15px;
+  column-gap: 15px;
+  row-gap: 15px;
+}
+
+.skill {
+  background-color: #8f73733c;
+  border-radius: 10px;
+  padding: 15px;
+  line-height: 1.4em;
+}
+
+.text-light-backg,
+.experience {
+  background-color: #33333315;
+  border-radius: 10px;
+  padding: 15px 15px 15px 15px;
+}
+
+.contacts {
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: column wrap;
+  padding: 30px 15px 30px 15px;
+  row-gap: 30px;
+}
+
+.align-r {
+  text-align: right;
+}
+
+.padded-5px {
+  padding: 5px;
+}
+
+.padded-10px {
+  padding: 10px;
+}
+
+.orange {
+  color: #ff8142;
+}
+
+.contact-input {
+  width: 60vw;
+  max-width: 650px;
+  padding: 4px;
+  border-radius: 4px;
+  border-width: thin;
+}
+
+.radius-4px {
+  border-radius: 4px;
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vittorio Paternostro - Software Engineer</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="style_general.css" />
+    <link rel="stylesheet" href="style_header_footer.css" />
+    <link rel="stylesheet" href="style_slider.css" />
+    <link rel="stylesheet" href="style_classes.css" />
+    <link rel="stylesheet" href="style_ids.css" />
+    <link rel="stylesheet" href="style_media_queries.css" />
+  </head>
+  <body>
+    <div class="nav-header">
+      <div
+        id="my-name"
+        class="nav-content"
+        onclick="window.location.href='index.html'"
+      >
+        Vittorio Paternostro
+        <div class="my-job">software engineer</div>
+      </div>
+
+      <div class="buttons">
+        <a href="index.html">Home</a>
+        <a href="career.html">Career</a>
+        <a id="contact" href="contact.html">Contact</a>
+        <div class="resume">
+          <button class="resume-button">
+            Resume<span style="font-size: 0.6em">&nbsp;&#9660;</span>
+          </button>
+          <div class="resume-items">
+            <a
+              title="PDF resume in 1 page"
+              download="./resume_vittorio_paternostro_2024_1page.pdf"
+              href="./resume_vittorio_paternostro_2024_1page.pdf"
+              ><img
+                src="./images/PDF_file_icon.svg"
+                alt="PDF"
+                style="height: 1.2em"
+              />&nbsp;1 Page</a
+            >
+            <br />
+            <a
+              title="PDF resume in 3 pages"
+              download="./resume_vittorio_paternostro_2024_3pages.pdf"
+              href="./resume_vittorio_paternostro_2024_3pages.pdf"
+              ><img
+                src="./images/PDF_file_icon.svg"
+                alt="PDF"
+                style="height: 1.2em"
+              />&nbsp;3 Pages</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contacts">
+      <div class="padded-page-content text-light-backg">
+        <h2>Contacts</h2>
+        <p>Vittorio Paternostro</p>
+        <p>cell phone USA: <strong>&nbsp;+1 (321) 574 8111</strong></p>
+        <p>cell phone Italy: <strong>+39 (351) 091 5452</strong></p>
+        <p>WhatsApp: <strong>&emsp;&emsp;&ensp;+1 (312) 479 8997</strong></p>
+        <p>
+          email:
+          <a href="mailto:vittoriopaternostro@gmail.com"
+            >vittoriopaternostro@gmail.com</a
+          >
+        </p>
+      </div>
+      <div class="padded-page-content text-light-backg">
+        <p>
+          If you have knowledge of a position that could fit my profile (see the
+          <a href="./career.html">Career</a> page), please don't hesitate to
+          contact me.
+        </p>
+      </div>
+
+      <!--  -->
+      <!-- TODO: temporarly hiding the form to send a message since it's not implemented yet -->
+      <!--  -->
+      <div style="display: none">
+        <div class="padded-page-content text-light-backg">
+          <h2>Message Me</h2>
+          <form method="post">
+            <input
+              type="hidden"
+              action="mailto:emailid@example.com"
+              method="post"
+              enctype="text/plain"
+            />
+            <table>
+              <tr>
+                <th class="padded-10px align-r">Name&nbsp;&nbsp;</th>
+                <td>
+                  <input type="hidden" name="input_0" value="Name" /><input
+                    class="contact-input"
+                    type="text"
+                    value=""
+                    name="input_0"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th class="padded-10px align-r">Email&nbsp;&nbsp;</th>
+                <td>
+                  <input type="hidden" name="input_1" value="Email" /><input
+                    class="contact-input"
+                    type="text"
+                    value=""
+                    name="input_1"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th class="padded-10px align-r">Phone&nbsp;&nbsp;</th>
+                <td>
+                  <input type="hidden" name="input_2" value="Phone" /><input
+                    class="contact-input"
+                    type="text"
+                    value=""
+                    name="input_2"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th class="padded-10px align-r">Message&nbsp;&nbsp;</th>
+                <td>
+                  <br />
+                  <input
+                    type="hidden"
+                    name="input_3"
+                    value="Message"
+                  /><textarea
+                    style="
+                      width: 60vw;
+                      height: 30vh;
+                      max-width: 650px;
+                      max-height: 180px;
+                      padding: 4px;
+                      border-radius: 4px;
+                    "
+                    name="input_3"
+                  ></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" style="text-align: right; padding-top: 5px">
+                  <button type="submit" class="submitBtn">Submit</button>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-head">
+      <p>
+        <span
+          title="Some quality principles: SOLID, high cohesion, loose coupling, interface segregation, separation of concern, you aren't gonna need it, avoid side effects, avoid code smells, avoid anti patterns, use design patterns, refactor as needed, automated testing, fail fast."
+        >
+          High quality software engineering
+        </span>
+        <span class="orange"> &rsaquo; </span>
+        <span
+          title="Interdependent people combine their own efforts with the efforts of others to achieve their greatest success. (Stephen Covey)"
+          >Cooperation</span
+        >
+        <span class="orange"> &rsaquo; </span>
+        <span
+          title="Enabling employees to grow and to continuously improve, favors company growth."
+          >Growth</span
+        >
+        <span class="orange"> &rsaquo; </span>
+        <span
+          title="Client satisfaction is the main component of company success. It is achievable through integrity, frequent interaction between client and team for continuous and fast feedback, and for building trust."
+        >
+          Success</span
+        >
+      </p>
+    </div>
+
+    <div class="footer">
+      <p style="text-align: center">
+        © 2024
+        <a href="mailto:vittoriopaternostro@gmail.com">Vittorio Paternostro</a>
+      </p>
+    </div>
+  </body>
+</html>
