@@ -1,16 +1,20 @@
 const cat = document.querySelector("#cat");
 const explosion = document.querySelector("#explosion");
+var explosionSound = document.getElementById("explosionSound");
 
 cat.addEventListener("click", function () {
-  console.log("explosion");
+  playExplosion();
   explosion.style.visibility = "visible";
   cat.style.visibility = "hidden";
 });
 
 explosion.addEventListener("click", function () {
-  console.log("cat");
   explosion.style.visibility = "hidden";
   cat.style.visibility = "visible";
 });
+
+function playExplosion() {
+  explosionSound.play();
+}
 
 explosion.style.visibility = "hidden";
