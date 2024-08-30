@@ -64,7 +64,7 @@ const sliderCompany = document.getElementById("my-pic-text-company");
 const sliderCity = document.getElementById("my-pic-text-city");
 const sliderAdditional = document.getElementById("my-pic-text-additional");
 
-cat.addEventListener("click", function () {
+prevButton.addEventListener("click", function () {
   if (index > 0) {
     index--;
     updateImage(index);
@@ -81,7 +81,7 @@ nextButton.addEventListener("click", function () {
 function updateImage(n) {
   imageElement.src = images[n].src;
   imageElement.alt = images[n].description;
-  cat.style.visibility = n > 0 ? "visible" : "hidden";
+  prevButton.style.visibility = n > 0 ? "visible" : "hidden";
   nextButton.style.visibility = n < numImages - 1 ? "visible" : "hidden";
   sliderRole.innerHTML = images[n].role;
   sliderCompany.innerHTML = images[n].company;
