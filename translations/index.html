@@ -60,40 +60,101 @@
     <script>
       const sectionContent = {
         whyme: [
-          "Over 19 years of experience in making certified translations of confidential documents. Recommended translator for two Italian Consulates and 16 US States.",
-          "Translation of technical, legal, medical, academic transcripts, contracts, and certificates. Translations for individuals, small and large companies like the Air Force and Lockheed Martin.",
-          "Fast turnaround, competitive rates, and personalized service. 100% success rate. No translation has ever been rejected by any institution. Save time and money by avoiding resubmissions and corrections.",
-          "Sworn interpreter in US Courts and legal hearings. Interpreter at government events, business negotiations, and trade shows.",
+          {
+            title: "Experience",
+            body: "Over 19 years of experience in making certified translations of confidential documents. Recommended translator for two Italian Consulates and 16 US States.",
+          },
+          {
+            title: "Types of translations",
+            body: "Translation of technical, legal, medical, academic transcripts, contracts, and certificates. Translations for individuals, small and large companies like the Air Force and Lockheed Martin.",
+          },
+          {
+            title: "Dedication and quality",
+            body: "Fast turnaround, competitive rates, and personalized service. 100% success rate. No translation has ever been rejected by any institution. Save time and money by avoiding resubmissions and corrections.",
+          },
+          {
+            title: "Interpreter",
+            body: "Sworn interpreter in US Courts and legal hearings. Interpreter at government events, business negotiations, and trade shows.",
+          },
         ],
         how: [
-          "You email me a clear scan or photo of your document and tell me where it will be submitted (Consulate, Court, university, employer, etc.).",
-          "I confirm the price and delivery date. Once you approve, I translate and format the document so that it mirrors the original as closely as possible.",
-          "You receive a signed and stamped translation in PDF (and, when required, on paper) together with a translator’s declaration that meets institutional requirements.",
+          {
+            title: "Send your document",
+            body: "You email me a clear scan or photo of your document and tell me where it will be submitted (Consulate, Court, university, employer, etc.).",
+          },
+          {
+            title: "Quote & timing",
+            body: "I confirm the price and delivery date. Once you approve, I translate and format the document so that it mirrors the original as closely as possible.",
+          },
+          {
+            title: "Certified delivery",
+            body: "You receive a signed and stamped translation in PDF (and, when required, on paper) together with a translator’s declaration that meets institutional requirements.",
+          },
         ],
         testimonials: [
-          "Non sapevo come funzionassero questo tipo di cose e sono rimasta lo stesso molto soddisfatta dal suo lavoro molto professionale e fatto bene Grazie ancora per tutto G.F.",
+          {
+            title: "What clients say",
+            body: "Non sapevo come funzionassero questo tipo di cose e sono rimasta lo stesso molto soddisfatta dal suo lavoro molto professionale e fatto bene Grazie ancora per tutto G.F.",
+          },
         ],
         prices: [
-          "Prices depend on length, topic, and urgency. Short standard documents (IDs, certificates, diplomas) usually have a flat fee.",
-          "Longer or highly technical documents (contracts, medical reports, court files) are usually priced per word or per page, with clear estimates before we start.",
-          "For urgent jobs and large volumes I always propose at least two options, so you can balance speed and cost.",
+          {
+            title: "Standard documents",
+            body: "Prices depend on length, topic, and urgency. Short standard documents (IDs, certificates, diplomas) usually have a flat fee.",
+          },
+          {
+            title: "Technical / long texts",
+            body: "Longer or highly technical documents (contracts, medical reports, court files) are usually priced per word or per page, with clear estimates before we start.",
+          },
+          {
+            title: "Urgent & bulk work",
+            body: "For urgent jobs and large volumes I always propose at least two options, so you can balance speed and cost.",
+          },
         ],
         contact: [
-          "For a precise quote, please send your document as a PDF or clear photo by email (vittoriopaternostro@gmail.com) and tell me where and when you need to submit it.",
-          "Typical response time is within a few business hours. Most standard certificates can be delivered within 1–2 working days.",
-          "📧 Email: vittorio@example.com — I look forward to helping you get your documents accepted the first time.",
+          {
+            title: "Share your file",
+            body: "For a precise quote, please send your document as a PDF or clear photo by email (vittoriopaternostro@gmail.com) and tell me where and when you need to submit it.",
+          },
+          {
+            title: "Fast turnaround",
+            body: "Typical response time is within a few business hours. Most standard certificates can be delivered within 1–2 working days.",
+          },
+          {
+            title: "Contact details",
+            body: "📧 Email: vittorio@example.com — I look forward to helping you get your documents accepted the first time.",
+          },
         ],
       };
 
       function setSection(key) {
         const container = document.getElementById("content-paragraphs");
         container.innerHTML = "";
-        const paragraphs = sectionContent[key] || [];
-        paragraphs.forEach((text) => {
+        const items = sectionContent[key] || [];
+
+        const grid = document.createElement("div");
+        grid.className = "tiles-grid";
+
+        items.forEach((item) => {
+          const tile = document.createElement("article");
+          tile.className = "tile";
+
+          if (item.title) {
+            const h4 = document.createElement("h4");
+            h4.className = "tile-title";
+            h4.textContent = item.title;
+            tile.appendChild(h4);
+          }
+
           const p = document.createElement("p");
-          p.textContent = text;
-          container.appendChild(p);
+          p.className = "tile-body";
+          p.textContent = item.body || "";
+          tile.appendChild(p);
+
+          grid.appendChild(tile);
         });
+
+        container.appendChild(grid);
       }
 
       document.addEventListener("DOMContentLoaded", () => {
