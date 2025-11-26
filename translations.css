@@ -1,0 +1,204 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+body {
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  color: #ffffff;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  background-image: url("vptranslations_768.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Sticky glass header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+
+  padding: 0.5rem 0.8rem; /* slightly tighter on mobile */
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background 0.25s ease, border-bottom-color 0.25s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.site-header.scrolled {
+  background: rgba(0, 0, 0, 0.55);
+  border-bottom-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Center Container */
+.hero-overlay {
+  flex: 1;
+  display: flex;
+  align-items: top;            /* CENTERED vertically again */
+  justify-content: center;
+  padding: 4.5rem 1.5rem 2rem;    /* balanced padding for centered layout */
+}
+
+/* Content Box */
+.hero-content {
+  text-align: center;
+  max-width: 1024px;
+  padding: 2.1rem 2.4rem;
+  background: rgba(0, 0, 0, 0.58);
+  border-radius: 14px;
+  backdrop-filter: blur(2px);
+}
+
+/* Navbar inside header */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem; /* a bit tighter on mobile */
+}
+
+.navbar .nav-link {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.6);
+  background: rgba(0,0,0,0.25);
+  color: #ffffff;
+  font-size: 0.85rem;   /* smaller, readable mobile size */
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.navbar .nav-link:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-1px);
+}
+
+.navbar .nav-link.active {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+/* Headings & Tagline */
+.main-title {
+  font-size: clamp(1.8rem, 1vw + 2rem, 3rem);
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.9rem;
+  font-weight: 600;
+}
+
+.tagline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 0.8rem;
+}
+
+.tagline span::after {
+  content: "·";
+  margin-left: 0.4rem;
+}
+
+.tagline span:last-child::after {
+  content: "";
+}
+
+/* Dynamic paragraphs */
+#content-paragraphs p {
+  font-size: 1.02rem;
+  text-align: left;
+  margin-top: 0.8rem;
+  line-height: 1.55;
+  opacity: 0.95;
+}
+
+.hero-content .cta {
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+
+.hero-content .cta a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Tablet and up: more air, larger type in navbar */
+@media (min-width: 768px) {
+  body {
+    background-image: url("vptranslations_1024.webp");
+  }
+
+  .site-header {
+    padding: 0.8rem 1.8rem;
+  }
+
+  .navbar {
+    gap: 0.75rem;
+  }
+
+  .navbar .nav-link {
+    font-size: 0.95rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .hero-overlay {
+    padding: 5rem 2.5rem 2.5rem;
+  }
+
+  .hero-content {
+    padding: 2.4rem 2.8rem;
+  }
+}
+
+/* Desktop: even more spacing and slightly larger nav text */
+@media (min-width: 1200px) {
+  body {
+    background-image: url("vptranslations_1600.webp");
+  }
+
+  .site-header {
+    padding: 1rem 3rem;
+  }
+
+  .navbar {
+    gap: 1rem;
+  }
+
+  .navbar .nav-link {
+    font-size: 1.02rem;
+    padding: 0.45rem 1.15rem;
+  }
+
+  .hero-overlay {
+    padding: 5.5rem 3rem 3rem;
+  }
+
+  .hero-content {
+    padding: 2.6rem 3.2rem;
+  }
+}

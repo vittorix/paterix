@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Italian–English Certified Translations | Vittorio Paternostro – 19+ Years
+      Experience
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional Italian–English certified translations with 19+ years of experience. Legal, medical, business and personal documents. US Court interpreter with a perfect success rate."
+    />
+    <meta
+      property="og:title"
+      content="Italian–English Certified Translations | Vittorio Paternostro – 19+ Years Experience"
+    />
+    <meta
+      property="og:description"
+      content="Certified translations for legal, medical, business and government documents. 19+ years of experience and 100% success rate."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="translations.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <a href="#" class="nav-link active" data-section="experience"
+          >Experience</a
+        >
+        <a href="#" class="nav-link" data-section="how">How it works</a>
+        <a href="#" class="nav-link" data-section="prices">Prices</a>
+        <a href="#" class="nav-link" data-section="contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero-overlay">
+      <section class="hero-content">
+        <h2 class="main-title">Italian ⇌ English</h2>
+        <h3>Certified Document Translations</h3>
+
+        <div class="tagline">
+          <span>Professional quality</span>
+          <span>19+ years of experience</span>
+          <span>100% success rate</span>
+        </div>
+        <br />
+        <div id="content-paragraphs">
+          <!-- Paragraphs will be injected here by JavaScript -->
+        </div>
+
+        <p class="cta">
+          📧 <a href="mailto:vittorio@example.com">Email me for a quote</a>
+        </p>
+      </section>
+    </main>
+
+    <script>
+      const sectionContent = {
+        experience: [
+          "Over 19 years of full-time experience translating and certifying Italian and English documents for private clients, law firms, hospitals, and multinational companies.",
+          "I have handled hundreds of sworn and certified translations for Consulates, Courts, and public institutions. No translation has ever been rejected.",
+          "My background as a court interpreter in the United States means that I am used to working with highly sensitive, confidential material under strict deadlines.",
+        ],
+        how: [
+          "You email me a clear scan or photo of your document and tell me where it will be submitted (Consulate, Court, university, employer, etc.).",
+          "I confirm the price and delivery date. Once you approve, I translate and format the document so that it mirrors the original as closely as possible.",
+          "You receive a signed and stamped translation in PDF (and, when required, on paper) together with a translator’s declaration that meets institutional requirements.",
+        ],
+        prices: [
+          "Prices depend on length, topic, and urgency. Short standard documents (IDs, certificates, diplomas) usually have a flat fee.",
+          "Longer or highly technical documents (contracts, medical reports, court files) are usually priced per word or per page, with clear estimates before we start.",
+          "For urgent jobs and large volumes I always propose at least two options, so you can balance speed and cost.",
+        ],
+        contact: [
+          "For a precise quote, please send your document as a PDF or clear photo by email (vittoriopaternostro@gmail.com) and tell me where and when you need to submit it.",
+          "Typical response time is within a few business hours. Most standard certificates can be delivered within 1–2 working days.",
+          "📧 Email: vittorio@example.com — I look forward to helping you get your documents accepted the first time.",
+        ],
+      };
+
+      function setSection(key) {
+        const container = document.getElementById("content-paragraphs");
+        container.innerHTML = "";
+        const paragraphs = sectionContent[key] || [];
+        paragraphs.forEach((text) => {
+          const p = document.createElement("p");
+          p.textContent = text;
+          container.appendChild(p);
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const header = document.querySelector(".site-header");
+
+        function updateHeader() {
+          if (window.scrollY > 10) {
+            header.classList.add("scrolled");
+          } else {
+            header.classList.remove("scrolled");
+          }
+        }
+
+        window.addEventListener("scroll", updateHeader);
+        updateHeader();
+
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          link.addEventListener("click", (event) => {
+            event.preventDefault();
+            const section = link.dataset.section;
+            setSection(section);
+
+            document
+              .querySelectorAll(".nav-link")
+              .forEach((l) => l.classList.remove("active"));
+            link.classList.add("active");
+          });
+        });
+
+        // Load default section
+        setSection("experience");
+      });
+    </script>
+  </body>
+</html>
