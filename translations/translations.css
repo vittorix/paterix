@@ -84,10 +84,6 @@ body {
   cursor: pointer;
   letter-spacing: 0.02em;
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
-  /*-webkit-text-stroke: 1px #000;    black outline around letters */
-  /*text-stroke: 1px #000;            future-proof */
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
-
 }
 
 .navbar .nav-link:hover {
@@ -98,6 +94,7 @@ body {
 .navbar .nav-link.active {
   /* background: #ffffffa2; */
   color: #ff8142;
+  border-color: #ffffff;
 }
 
 /* Headings & Tagline */
@@ -260,3 +257,9 @@ body {
     padding: 0 1rem;
   }
 }
+
+
+.ita-green { color: #6aff6a;}
+.ita-red { color: #ff6a6a; }
+.en-blue { color: #6ca6fd; }
+.sh-red { color: #ff6a6a; }

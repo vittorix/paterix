@@ -36,10 +36,13 @@
       </nav>
     </header>
 
-    
     <main class="hero-overlay">
       <section class="hero-content">
-        <h2 class="main-title">Italian ⇌ English</h2>
+        <h2 class="main-title">
+          <span class="ita-green">It</span>ali<span class="ita-red">an</span>
+          ⇌
+          <span class="en-blue">En</span>gli<span class="sh-red">sh</span>
+        </h2>
         <h3>Certified Document Translations</h3>
 
         <div class="tagline">
@@ -60,75 +63,73 @@
       </section>
     </main>
 
-
-    
     <script>
       const sectionContent = {
         whyme: [
           {
             title: "Experience",
-            body: "Over 19 years of experience in certified Italian–English translations for individuals, companies, and institutions."
+            body: "Over 19 years of experience in certified Italian–English translations for individuals, companies, and institutions.",
           },
           {
             title: "Types of translations",
-            body: "Legal, academic, medical, technical and corporate documents, as well as consular and immigration paperwork."
+            body: "Legal, academic, medical, technical and corporate documents, as well as consular and immigration paperwork.",
           },
           {
             title: "Dedication and quality",
-            body: "Careful formatting, clear communication, and a focus on getting your documents accepted the first time."
+            body: "Careful formatting, clear communication, and a focus on getting your documents accepted the first time.",
           },
           {
             title: "Interpreter",
-            body: "Experienced court and conference interpreter for hearings, depositions, business meetings, and events."
-          }
+            body: "Experienced court and conference interpreter for hearings, depositions, business meetings, and events.",
+          },
         ],
         how: [
           {
             title: "Send your document",
-            body: "Email a clear scan or photo and tell me where it needs to be submitted (Consulate, Court, university, employer, etc.)."
+            body: "Email a clear scan or photo and tell me where it needs to be submitted (Consulate, Court, university, employer, etc.).",
           },
           {
             title: "Quote & timing",
-            body: "You receive a clear quote and delivery date. Once approved, I translate and format the document to mirror the original."
+            body: "You receive a clear quote and delivery date. Once approved, I translate and format the document to mirror the original.",
           },
           {
             title: "Certified delivery",
-            body: "You receive a signed and stamped translation as a PDF (and paper copy if needed) with a translator’s declaration."
-          }
+            body: "You receive a signed and stamped translation as a PDF (and paper copy if needed) with a translator’s declaration.",
+          },
         ],
         testimonials: [
           {
             title: "What clients say",
-            body: "Clients appreciate the speed, clarity, and reliability of my certified translations, often under tight deadlines."
-          }
+            body: "Clients appreciate the speed, clarity, and reliability of my certified translations, often under tight deadlines.",
+          },
         ],
         prices: [
           {
             title: "Standard documents",
-            body: "Certificates, IDs, and short official documents are usually charged at a flat rate for predictable costs."
+            body: "Certificates, IDs, and short official documents are usually charged at a flat rate for predictable costs.",
           },
           {
             title: "Technical / long texts",
-            body: "Contracts, medical reports, and detailed technical documents are usually priced per word or per page."
+            body: "Contracts, medical reports, and detailed technical documents are usually priced per word or per page.",
           },
           {
             title: "Urgent & bulk work",
-            body: "For urgent projects and large volumes we can agree on tailored timelines and pricing options."
-          }
+            body: "For urgent projects and large volumes we can agree on tailored timelines and pricing options.",
+          },
         ],
         contact: [
           {
             title: "Share your file",
-            body: "For a precise quote, email your document and indicate the destination authority and your deadline."
+            body: "For a precise quote, email your document and indicate the destination authority and your deadline.",
           },
           {
             title: "Fast turnaround",
-            body: "Most requests receive an answer within a few business hours, often with more than one delivery option."
+            body: "Most requests receive an answer within a few business hours, often with more than one delivery option.",
           },
           {
             title: "Contact details",
-            body: "📧 Email: vittorio@example.com – I look forward to helping you complete your process smoothly."
-          }
+            body: "📧 Email: vittorio@example.com – I look forward to helping you complete your process smoothly.",
+          },
         ],
       };
 
@@ -180,10 +181,10 @@
 
         // Load default section based on active nav, fallback to "whyme"
         const defaultSection =
-          document.querySelector(".nav-link.active")?.dataset.section || "whyme";
+          document.querySelector(".nav-link.active")?.dataset.section ||
+          "whyme";
         setSection(defaultSection);
       });
     </script>
-
   </body>
 </html>
