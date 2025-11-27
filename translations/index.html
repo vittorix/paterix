@@ -68,67 +68,104 @@
         whyme: [
           {
             title: "Experience",
-            body: "Over 19 years of experience in certified Italian–English translations for individuals, companies, and institutions.",
+            body: "Over 19 years of experience in making certified translations of confidential documents. Recommended translator by two Italian Consulates for 16 US States.",
           },
           {
             title: "Types of translations",
-            body: "Legal, academic, medical, technical and corporate documents, as well as consular and immigration paperwork.",
+            body: "Translation of technical, legal, medical, and academic documents, including transcripts, contracts, and certificates. Translations for individuals as well as small and large companies, including the Air Force and Lockheed Martin",
           },
           {
             title: "Dedication and quality",
-            body: "Careful formatting, clear communication, and a focus on getting your documents accepted the first time.",
+            body: "Fast turnaround, competitive rates, and personalized service. 100% success rate. No translation has ever been rejected by any institution. Save time and money by avoiding resubmissions and corrections.",
           },
           {
             title: "Interpreter",
-            body: "Experienced court and conference interpreter for hearings, depositions, business meetings, and events.",
+            body: "Sworn interpreter for court hearings and depositions. Interpreter at government events, business negotiations, and trade shows.",
           },
         ],
         how: [
           {
-            title: "Send your document",
-            body: "Email a clear scan or photo and tell me where it needs to be submitted (Consulate, Court, university, employer, etc.).",
+            title: "Step 1 - Send your document",
+            body: "Send me a clear scan or photo of your documents to be translated. You can send them by email (vittoriopaternostro@gmail.com or ilikechicago@gmail.com), through WhatsApp (+312 479 8997) or via the contact form on this web site (see 'Conctat' above).",
           },
           {
-            title: "Quote & timing",
-            body: "You receive a clear quote and delivery date. Once approved, I translate and format the document to mirror the original.",
+            title: "Step 2 - Quote of cost & timing",
+            body: "I review the documents and get back to you with an exact quote of cost and  delivery time. I will also indicate how to make payment.",
           },
           {
-            title: "Certified delivery",
-            body: "You receive a signed and stamped translation as a PDF (and paper copy if needed) with a translator’s declaration.",
+            title: "Step 3 - Payment and translation",
+            body: "Once you send payment, I start translating, keeping the content and the meaning as close as possible to the original. I also format the document so that it matches the original as closely as possible. At the end of any translation I add my certificaton with the image of my seal and contacts.",
+          },
+          {
+            title: "Step 4 - Delivery of translation",
+            body: "You receive the translations in printable PDF format to be taken to the Consulate or other requesting office. I am always available to answer any questions or provide further assistance if needed. At the end I'll send you a quality survey to make sure my customers are satisfied with my work. Any tip is apreciated.",
           },
         ],
         testimonials: [
           {
-            title: "What clients say",
-            body: "Clients appreciate the speed, clarity, and reliability of my certified translations, often under tight deadlines.",
+            title: "Spontaneous survey results",
+            body: "Satisfaction with the translation services: 9.8/10<br> Communication with Vittorio Paternostro: 10/10 <br> Response time from Vittorio Paternostro: 10/10  <br> Comfort with confidentiality: 9.9/10  <br> Quality of the translated documents: 10/10  <br> Price of the translation: 9.4/10",
+          },
+          {
+            title: "Cristina S. (Missouri, USA)",
+            body: '"Wow! Thank you so much for your thoughtful attention and advice!" <br>"Very professional, responsive, and going the extra mile to help!"',
+          },
+          {
+            title: "Ginevra F. (Italy)",
+            body: '"I didn\'t know how these kind of things worked and I was still very satisfied with your very professional and well-done work. Thanks again for everything."',
+          },
+
+          {
+            title: "Vanessa A. (Illinois, USA)",
+            body: '"Wonderful! Thank you so much! Appreciate the quick turnaround."<br>"Thank you so much for your quick response and for offering to do it in a timely manner."',
+          },
+          {
+            title: "Pam W. (Illinois, USA)",
+            body: '"I am happy that I found you on their website, and appreciate your responsiveness."<br>"Thank you very much, Vittorio. I really appreciate your working so hard and so fast on this."',
+          },
+          {
+            title: "Peck G. (Illinois, USA)",
+            body: '"I appreciate the urgency with which you completed the translation. It looks great!"',
+          },
+          {
+            title: "Swarup R. (Illinois, USA)",
+            body: '"You are superman!!"',
+          },
+          {
+            title: "Francesca D. L. P. (Wisconsin, USA)",
+            body: '"Thank you so much for your work and your speed! Everything looks perfect!"',
+          },
+          {
+            title: "Anonymous reviewer",
+            body: '"The service was great and Vittorio did a great job. My overall score was 9 only because the cost but about the quality, return time and availability Vittorio was great"',
           },
         ],
         prices: [
           {
             title: "Standard documents",
-            body: "Certificates, IDs, and short official documents are usually charged at a flat rate for predictable costs.",
+            body: "Prices depend on length, topic, and urgency. Short standard documents (IDs, certificates, diplomas) usually have a flat fee.",
           },
           {
             title: "Technical / long texts",
-            body: "Contracts, medical reports, and detailed technical documents are usually priced per word or per page.",
+            body: "Longer or highly technical documents (contracts, medical reports, court files) are usually priced per word or per page, with clear estimates before we start.",
           },
           {
             title: "Urgent & bulk work",
-            body: "For urgent projects and large volumes we can agree on tailored timelines and pricing options.",
+            body: "For urgent jobs and large volumes I always propose at least two options, so you can balance speed and cost.",
           },
         ],
         contact: [
           {
             title: "Share your file",
-            body: "For a precise quote, email your document and indicate the destination authority and your deadline.",
+            body: "For a precise quote, please send your document as a PDF or clear photo by email (vittoriopaternostro@gmail.com) and tell me where and when you need to submit it.",
           },
           {
             title: "Fast turnaround",
-            body: "Most requests receive an answer within a few business hours, often with more than one delivery option.",
+            body: "Typical response time is within a few business hours. Most standard certificates can be delivered within 1–2 working days.",
           },
           {
             title: "Contact details",
-            body: "📧 Email: vittorio@example.com – I look forward to helping you complete your process smoothly.",
+            body: "📧 Email: vittorio@example.com — I look forward to helping you get your documents accepted the first time.",
           },
         ],
       };
@@ -154,7 +191,10 @@
 
           const p = document.createElement("p");
           p.className = "tile-body";
-          p.textContent = item.body || "";
+          // if (item.body) {
+
+          // }
+          p.innerHTML = item.body || "";
           tile.appendChild(p);
 
           grid.appendChild(tile);
