@@ -36,6 +36,7 @@
       </nav>
     </header>
 
+    
     <main class="hero-overlay">
       <section class="hero-content">
         <h2 class="main-title">Italian ⇌ English</h2>
@@ -46,9 +47,11 @@
           <span>19+ years of experience</span>
           <span>100% success rate</span>
         </div>
-        <br />
+      </section>
+
+      <section class="content-section">
         <div id="content-paragraphs">
-          <!-- Paragraphs will be injected here by JavaScript -->
+          <!-- Tiles will be injected here by JavaScript -->
         </div>
 
         <p class="cta">
@@ -57,85 +60,87 @@
       </section>
     </main>
 
+
+    
     <script>
       const sectionContent = {
         whyme: [
           {
             title: "Experience",
-            body: "Over 19 years of experience in making certified translations of confidential documents. Recommended translator for two Italian Consulates and 16 US States.",
+            body: "Over 19 years of experience in certified Italian–English translations for individuals, companies, and institutions."
           },
           {
             title: "Types of translations",
-            body: "Translation of technical, legal, medical, academic transcripts, contracts, and certificates. Translations for individuals, small and large companies like the Air Force and Lockheed Martin.",
+            body: "Legal, academic, medical, technical and corporate documents, as well as consular and immigration paperwork."
           },
           {
             title: "Dedication and quality",
-            body: "Fast turnaround, competitive rates, and personalized service. 100% success rate. No translation has ever been rejected by any institution. Save time and money by avoiding resubmissions and corrections.",
+            body: "Careful formatting, clear communication, and a focus on getting your documents accepted the first time."
           },
           {
             title: "Interpreter",
-            body: "Sworn interpreter in US Courts and legal hearings. Interpreter at government events, business negotiations, and trade shows.",
-          },
+            body: "Experienced court and conference interpreter for hearings, depositions, business meetings, and events."
+          }
         ],
         how: [
           {
             title: "Send your document",
-            body: "You email me a clear scan or photo of your document and tell me where it will be submitted (Consulate, Court, university, employer, etc.).",
+            body: "Email a clear scan or photo and tell me where it needs to be submitted (Consulate, Court, university, employer, etc.)."
           },
           {
             title: "Quote & timing",
-            body: "I confirm the price and delivery date. Once you approve, I translate and format the document so that it mirrors the original as closely as possible.",
+            body: "You receive a clear quote and delivery date. Once approved, I translate and format the document to mirror the original."
           },
           {
             title: "Certified delivery",
-            body: "You receive a signed and stamped translation in PDF (and, when required, on paper) together with a translator’s declaration that meets institutional requirements.",
-          },
+            body: "You receive a signed and stamped translation as a PDF (and paper copy if needed) with a translator’s declaration."
+          }
         ],
         testimonials: [
           {
             title: "What clients say",
-            body: "Non sapevo come funzionassero questo tipo di cose e sono rimasta lo stesso molto soddisfatta dal suo lavoro molto professionale e fatto bene Grazie ancora per tutto G.F.",
-          },
+            body: "Clients appreciate the speed, clarity, and reliability of my certified translations, often under tight deadlines."
+          }
         ],
         prices: [
           {
             title: "Standard documents",
-            body: "Prices depend on length, topic, and urgency. Short standard documents (IDs, certificates, diplomas) usually have a flat fee.",
+            body: "Certificates, IDs, and short official documents are usually charged at a flat rate for predictable costs."
           },
           {
             title: "Technical / long texts",
-            body: "Longer or highly technical documents (contracts, medical reports, court files) are usually priced per word or per page, with clear estimates before we start.",
+            body: "Contracts, medical reports, and detailed technical documents are usually priced per word or per page."
           },
           {
             title: "Urgent & bulk work",
-            body: "For urgent jobs and large volumes I always propose at least two options, so you can balance speed and cost.",
-          },
+            body: "For urgent projects and large volumes we can agree on tailored timelines and pricing options."
+          }
         ],
         contact: [
           {
             title: "Share your file",
-            body: "For a precise quote, please send your document as a PDF or clear photo by email (vittoriopaternostro@gmail.com) and tell me where and when you need to submit it.",
+            body: "For a precise quote, email your document and indicate the destination authority and your deadline."
           },
           {
             title: "Fast turnaround",
-            body: "Typical response time is within a few business hours. Most standard certificates can be delivered within 1–2 working days.",
+            body: "Most requests receive an answer within a few business hours, often with more than one delivery option."
           },
           {
             title: "Contact details",
-            body: "📧 Email: vittorio@example.com — I look forward to helping you get your documents accepted the first time.",
-          },
+            body: "📧 Email: vittorio@example.com – I look forward to helping you complete your process smoothly."
+          }
         ],
       };
 
       function setSection(key) {
         const container = document.getElementById("content-paragraphs");
         container.innerHTML = "";
-        const items = sectionContent[key] || [];
 
+        const tiles = sectionContent[key] || [];
         const grid = document.createElement("div");
         grid.className = "tiles-grid";
 
-        items.forEach((item) => {
+        tiles.forEach((item) => {
           const tile = document.createElement("article");
           tile.className = "tile";
 
@@ -158,22 +163,11 @@
       }
 
       document.addEventListener("DOMContentLoaded", () => {
-        const header = document.querySelector(".site-header");
+        const navLinks = document.querySelectorAll(".nav-link");
 
-        function updateHeader() {
-          if (window.scrollY > 10) {
-            header.classList.add("scrolled");
-          } else {
-            header.classList.remove("scrolled");
-          }
-        }
-
-        window.addEventListener("scroll", updateHeader);
-        updateHeader();
-
-        document.querySelectorAll(".nav-link").forEach((link) => {
-          link.addEventListener("click", (event) => {
-            event.preventDefault();
+        navLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
             const section = link.dataset.section;
             setSection(section);
 
@@ -184,9 +178,12 @@
           });
         });
 
-        // Load default section
-        setSection("whyme");
+        // Load default section based on active nav, fallback to "whyme"
+        const defaultSection =
+          document.querySelector(".nav-link.active")?.dataset.section || "whyme";
+        setSection(defaultSection);
       });
     </script>
+
   </body>
 </html>
