@@ -200,7 +200,7 @@ body {
 .content-section {
   max-width: 1024px;
   margin: 1.8rem auto 2.4rem;
-  padding: 0 1.4rem;
+  /* padding: 0 1.4rem; */
 }
 
 /* Tiles layout */
@@ -256,7 +256,7 @@ body {
 
   .content-section {
     margin-top: 1.4rem;
-    padding: 0 1rem;
+    /* padding: 0; */
   }
 }
 
