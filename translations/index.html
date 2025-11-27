@@ -64,51 +64,119 @@
     </main>
 
     <script>
+      function bold(txt) {
+        return "<b>" + txt + "</b>";
+      }
+
+      function red(txt) {
+        return '<span style="color:red;">' + txt + "</span>";
+      }
+
+      function orange(txt) {
+        return '<span style="color:#ff8142;">' + txt + "</span>";
+      }
+
+      function spaces(n) {
+        return "&nbsp;".repeat(n);
+      }
+
+      function surveyText(txt) {
+        return red(txt + "/10<br>");
+      }
+
       const sectionContent = {
         whyme: [
           {
             title: "Experience",
-            body: "Over 19 years of experience in making certified translations of confidential documents. Recommended translator by two Italian Consulates for 16 US States.",
+            body:
+              "Over 19 years of experience in making certified translations of confidential documents. <br>" +
+              orange(
+                "Recommended translator by two Italian Consulates for 16 US States."
+              ),
           },
           {
             title: "Types of translations",
-            body: "Translation of technical, legal, medical, and academic documents, including transcripts, contracts, and certificates. Translations for individuals as well as small and large companies, including the Air Force and Lockheed Martin",
+            body:
+              "Translation of " +
+              orange("technical, legal, medical, and academic documents") +
+              ", including transcripts, contracts, and certificates. Translations for individuals as well as small and large companies, including the Air Force and Lockheed Martin",
           },
           {
             title: "Dedication and quality",
-            body: "Fast turnaround, competitive rates, and personalized service. 100% success rate. No translation has ever been rejected by any institution. Save time and money by avoiding resubmissions and corrections.",
+            body:
+              "Fast turnaround, competitive rates, and personalized service. " +
+              orange("100% success rate.") +
+              " No translation has ever been rejected by any institution. Save time and money by avoiding resubmissions and corrections.",
           },
           {
             title: "Interpreter",
-            body: "Sworn interpreter for court hearings and depositions. Interpreter at government events, business negotiations, and trade shows.",
+            body:
+              "Sworn interpreter for court hearings and depositions. " +
+              orange("Interpreter") +
+              " at government events, business negotiations, and trade shows.",
           },
         ],
         how: [
           {
             title: "Step 1 - Send your document",
-            body: "Send me a clear scan or photo of your documents to be translated. You can send them by email (vittoriopaternostro@gmail.com or ilikechicago@gmail.com), through WhatsApp (+312 479 8997) or via the contact form on this web site (see 'Conctat' above).",
+            body:
+              orange("Send me a clear scan or photo of your documents") +
+              " to be translated. <br>You can send them: <br>– by email " +
+              orange("vittoriopaternostro@gmail.com") +
+              "<br>" +
+              spaces(17) +
+              orange("ilikechicago@gmail.com") +
+              "<br>" +
+              "– through " +
+              orange("WhatsApp +1 312 479 8997") +
+              "<br>– via the " +
+              orange("contact form") +
+              " on this web site (see 'Conctat' above).",
           },
           {
             title: "Step 2 - Quote of cost & timing",
-            body: "I review the documents and get back to you with an exact quote of cost and  delivery time. I will also indicate how to make payment.",
+            body:
+              "I review the documents and get back to you with " +
+              orange("an exact quote of cost and  delivery time.") +
+              " I will also indicate how to make payment.",
           },
           {
             title: "Step 3 - Payment and translation",
-            body: "Once you send payment, I start translating, keeping the content and the meaning as close as possible to the original. I also format the document so that it matches the original as closely as possible. At the end of any translation I add my certificaton with the image of my seal and contacts.",
+            body:
+              "Once you send payment, " +
+              orange("I start translating") +
+              ", keeping the content and the meaning as close as possible to the original. I also format the document so that it matches the original as closely as possible. At the end of any translation I add my certificaton with the image of my seal and contacts.",
           },
           {
             title: "Step 4 - Delivery of translation",
-            body: "You receive the translations in printable PDF format to be taken to the Consulate or other requesting office. I am always available to answer any questions or provide further assistance if needed. At the end I'll send you a quality survey to make sure my customers are satisfied with my work. Any tip is apreciated.",
+            body:
+              orange("You receive the translations in printable PDF format") +
+              " to be taken to the Consulate or other requesting office. <br>I am always available to answer any questions or provide further assistance if needed. <br>At the end I'll send you a quality survey to make sure my customers are satisfied with my work. <br>Any tip is appreciated but not required.",
           },
         ],
         testimonials: [
           {
             title: "Spontaneous survey results",
-            body: "Satisfaction with the translation services: 9.8/10<br> Communication with Vittorio Paternostro: 10/10 <br> Response time from Vittorio Paternostro: 10/10  <br> Comfort with confidentiality: 9.9/10  <br> Quality of the translated documents: 10/10  <br> Price of the translation: 9.4/10",
+            body:
+              "<div style='background-color: #fff; padding: 10px; color: black'>Satisfaction with the translation services: " +
+              surveyText(9.8) +
+              "Communication with Vittorio Paternostro: " +
+              surveyText(10) +
+              "Response time from Vittorio Paternostro: " +
+              surveyText(10) +
+              "Comfort with confidentiality: " +
+              surveyText(9.9) +
+              "Quality of the translated documents: " +
+              surveyText(10) +
+              "Price of the translation: " +
+              surveyText(9.4) +
+              "</div>",
           },
           {
             title: "Cristina S. (Missouri, USA)",
-            body: '"Wow! Thank you so much for your thoughtful attention and advice!" <br>"Very professional, responsive, and going the extra mile to help!"',
+            body:
+              '"Wow! Thank you so much for your thoughtful attention and advice!" <br>"Very professional, responsive, and ' +
+              red("going the extra mile to help!"),
           },
           {
             title: "Ginevra F. (Italy)",
@@ -121,7 +189,10 @@
           },
           {
             title: "Pam W. (Illinois, USA)",
-            body: '"I am happy that I found you on their website, and appreciate your responsiveness."<br>"Thank you very much, Vittorio. I really appreciate your working so hard and so fast on this."',
+            body:
+              '"' +
+              red("I am happy that I found you on their website") +
+              ', and appreciate your responsiveness."<br>"Thank you very much, Vittorio. I really appreciate your working so hard and so fast on this."',
           },
           {
             title: "Peck G. (Illinois, USA)",
@@ -129,7 +200,7 @@
           },
           {
             title: "Swarup R. (Illinois, USA)",
-            body: '"You are superman!!"',
+            body: red('"You are superman!!"') + " [sic]",
           },
           {
             title: "Francesca D. L. P. (Wisconsin, USA)",
@@ -137,7 +208,7 @@
           },
           {
             title: "Anonymous reviewer",
-            body: '"The service was great and Vittorio did a great job. My overall score was 9 only because the cost but about the quality, return time and availability Vittorio was great"',
+            body: '"The service was great and Vittorio did a great job. My overall score was 9 only because the cost, but about the quality, return time and availability Vittorio was great."',
           },
         ],
         prices: [
@@ -165,7 +236,7 @@
           },
           {
             title: "Contact details",
-            body: "📧 Email: vittorio@example.com — I look forward to helping you get your documents accepted the first time.",
+            body: "📧 Email: vittoriopaternostro@gmail.com",
           },
         ],
       };
