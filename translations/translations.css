@@ -18,6 +18,11 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed; /*fix the picture moving with clicking on diffeerent nav buttons */
+}
+
+html, body { /* On some smartphones, background-attachment: fixed is ignored. So we set full height */
+  height: 100%;
 }
 
 /* Sticky glass header */
