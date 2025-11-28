@@ -255,9 +255,25 @@
               " <br><br><div style='background-color: #fff; padding: 5px; color: black; border-radius: 10px;'>" +
               "Email: " +
               '<a href="mailto:vittoriopaternostro@gmail.com">vittoriopaternostro@gmail.com</a><span style="line-height: 1.9;"><br></span>' +
-              '<a href="mailto:ilikechicago@gmail.com">ilikechicago@gmail.com</a><br><br>' +
+              '<a href="mailto:ilikechicago@gmail.com">ilikechicago@gmail.com</a><br><br><br>' +
               '<a aria-label="Chat on WhatsApp" href="https://wa.me/13124798997" class="centered-link">WhatsApp:&nbsp<img alt="Chat on WhatsApp" src="./whatsapp.png" / width="200px" height="35px"><a />' +
-              "<br>Request a quote form:<br>[CONTACT_FORM]</div>",
+              '<br><br>Request a quote:<br><form class="contact-form" id="quoteForm">' +
+              '<div class="form-group">' +
+              '<label for="fullName">Full Name:</label>' +
+              '<input type="text" id="fullName" name="fullName" required>' +
+              "</div>" +
+              '<div class="form-group">' +
+              '<label for="email">Email:</label>' +
+              '<input type="email" id="email" name="email" required>' +
+              "</div>" +
+              '<div class="form-group">' +
+              '<label for="files">Attach file(s):</label>' +
+              '<input type="file" id="files" name="files" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">' +
+              "</div>" +
+              '<button type="submit" class="quote-btn">' +
+              orange("Get a Free Quote") +
+              "</button>" +
+              "</form></div>",
           },
           {
             title: "What you will receive",

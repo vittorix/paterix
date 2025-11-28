@@ -319,3 +319,36 @@ html, body { /* On some smartphones, background-attachment: fixed is ignored. So
     color: black;
     /* Add other styles like padding, gap, or width as needed */
 }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ff8142;
+  box-shadow: 0 0 4px rgba(255, 129, 66, 0.4);
+}
