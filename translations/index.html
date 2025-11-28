@@ -60,9 +60,8 @@
         </div>
         <br />
         <p class="cta">
-          📧
           <a href="mailto:vittoriopaternostro@gmail.com.com"
-            >Email me for a quote</a
+            >Copyright © Vittorio Paternostro</a
           >
         </p>
       </section>
@@ -89,6 +88,21 @@
         return red(txt + "/10<br>");
       }
 
+      function goToQuoteSection() {
+        const target = document.getElementById("get-a-free-quote");
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+          return;
+        }
+        const quoteNav = document.querySelector(
+          '.nav-link[data-section="quote"]'
+        );
+        if (quoteNav) {
+          quoteNav.click();
+          quoteNav.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+
       const sectionContent = {
         whyme: [
           {
@@ -103,48 +117,52 @@
             title: "Types of translations",
             body:
               "Translation of " +
-              orange("technical, legal, medical, and academic documents") +
-              ", including transcripts, contracts, and certificates. Translations for individuals as well as small and large companies, including the Air Force and Lockheed Martin",
+              orange("technical, legal, medical, academic") +
+              ", and any other type of documents, including transcripts, contracts, and certificates.<br>Translations for individuals as well as small and large companies, including the Air Force and Lockheed Martin",
           },
           {
             title: "Dedication and quality",
             body:
               "Fast turnaround, competitive rates, and personalized service. " +
               orange("100% success rate.") +
-              " No translation has ever been rejected by any institution. Save time and money by avoiding resubmissions and corrections.",
+              "<br>No translation has ever been rejected by any institution.<br>Save time and money by avoiding resubmissions and corrections.",
           },
           {
             title: "Interpreter",
             body:
-              "Sworn Sicilian/English and Italian/English interpreter for court hearings and depositions." +
+              "Sworn Sicilian/English and Italian/English interpreter for court hearings and depositions.<br>" +
               orange("Interpreter") +
               " at government events, business negotiations, and trade shows.",
           },
         ],
         how: [
           {
-            title: "Get a Free Quote",
-            body: "Get a free non-committal quote in seconds by clicking here and following each steps: ",
+            title: "Step 1 - Get a Free Quote",
+            body:
+              "Request a free non-committal quote in seconds by clicking here and following two easy steps:&nbsp&nbsp&nbsp" +
+              '<button type="button" class="quote-btn" onclick="goToQuoteSection()">' +
+              orange("Get a Free Quote") +
+              "</button>",
           },
           {
             title: "Step 2 - Quote of cost & timing",
             body:
               "I review the documents and get back to you with " +
               orange("an exact quote of cost and  delivery time.") +
-              " I will also indicate how to make payment.",
+              "<br>I will also indicate how to make payment.",
           },
           {
             title: "Step 3 - Payment and translation",
             body:
               "Once you send payment, " +
               orange("I start translating") +
-              ", keeping the content and the meaning as close as possible to the original. I also format the document so that it matches the original as closely as possible. At the end of any translation I add my certificaton with the image of my seal and contacts.",
+              ", keeping the content and the meaning as close as possible to the original.<br>I also format the document so that it matches the original as closely as possible.<br>At the end of any translation I add my certificaton with the image of my seal and contacts.",
           },
           {
             title: "Step 4 - Delivery of translation",
             body:
               orange("You receive the translations in printable PDF format") +
-              " to be taken to the Consulate or other requesting office. <br>I am always available to answer any questions or provide further assistance if needed. <br>At the end I'll send you a quality survey to make sure my customers are satisfied with my work. <br>Any tip is appreciated but not required.",
+              " to be taken to the Consulate or other requesting office.<br>I am always available to answer any questions or provide further assistance if needed.<br>At the end I'll send you a quality survey to make sure my customers are satisfied with my work. <br>Any tip is appreciated but not required.",
           },
         ],
         testimonials: [
@@ -206,12 +224,16 @@
         ],
         prices: [
           {
-            title: "Standard documents",
-            body: "Prices depend on length, topic, and urgency. Short standard documents (IDs, certificates, diplomas) usually have a flat fee.",
+            title: "How prices are determined",
+            body: "The total price of the translation is the sum of the cost of translating each page. <br>The price of each page depends on its length and complexity.<br>In other words, it varies on the number of words, the structure, and how long it takes me to translate it.<br>Similar documents might be eligible for discounts.",
           },
           {
-            title: "Technical / long texts",
-            body: "Longer or highly technical documents (contracts, medical reports, court files) are usually priced per word or per page, with clear estimates before we start.",
+            title: "Cost of the page",
+            body: "Short and simple pages might cost 10$.<br>Very complex pages might cost up to 80$.",
+          },
+          {
+            title: "Long documents",
+            body: "Longer documents, like books or contracts are usually priced per word or per page, with clear estimates before we start.",
           },
           {
             title: "Urgent & bulk work",
@@ -220,28 +242,27 @@
         ],
         quote: [
           {
-            title: "Free Quote",
+            title: "Step 1 - Digitalize the documents",
             body:
-              orange("Send me a clear scan or photo of your documents") +
-              " to be translated. <br>You can send them: <br>– by email " +
-              orange("vittoriopaternostro@gmail.com") +
-              "<br>" +
+              orange("Scan the documents to translate or take a clear photo") +
+              ".<br><br>Make sure all the text is legible and the pages are not cut off or interposed.<br><br>Hard to read documents are ok for the quote, but not for the translation process",
+          },
+          {
+            title: "Step 2 - Send me the documents",
+            body:
+              orange("Send me the documents to be translated.") +
+              " <br><br><div style='background-color: #fff; padding: 10px; color: black; border-radius: 10px;'>" +
+              "by email:" +
+              spaces(3) +
+              '<a href="mailto:vittoriopaternostro@gmail.com" style="line-height: 2">vittoriopaternostro@gmail.com</a><span ><br></span>' +
               spaces(17) +
-              orange("ilikechicago@gmail.com") +
-              "<br>" +
-              "– through " +
-              orange("WhatsApp +1 312 479 8997") +
-              "<br>– via the " +
-              orange("contact form") +
-              " on this web site (see 'Contact' above).",
+              '<a href="mailto:ilikechicago@gmail.com">ilikechicago@gmail.com</a><br><br>' +
+              '<a aria-label="Chat on WhatsApp" href="https://wa.me/13124798997" class="centered-link">or through:&nbsp<img alt="Chat on WhatsApp" src="./whatsapp.png" / width="130px" height="35px">&nbsp(+1.312 479 8997)<a />' +
+              "<br>or by using the form below.</div>",
           },
           {
-            title: "Technical / long texts",
-            body: "Longer or highly technical documents (contracts, medical reports, court files) are usually priced per word or per page, with clear estimates before we start.",
-          },
-          {
-            title: "Urgent & bulk work",
-            body: "For urgent jobs and large volumes I always propose at least two options, so you can balance speed and cost.",
+            title: "What you will receive",
+            body: "You will receive an answer with a free exact quote of cost and time needed for the translation.",
           },
         ],
         contact: [
