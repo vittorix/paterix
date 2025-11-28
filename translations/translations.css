@@ -13,6 +13,7 @@ body {
   display: flex;
   align-items: stretch;
   justify-content: center;
+  overflow-x: hidden; /* prevent horizontal overflow on mobile */
 
   background-image: url("vptranslations_768.webp");
   background-size: cover;
@@ -251,6 +252,8 @@ html, body { /* On some smartphones, background-attachment: fixed is ignored. So
   font-size: 1.3rem;
   line-height: 1.35;
   opacity: 0.96;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* 1 tile per row on smaller screens */
@@ -310,6 +313,8 @@ html, body { /* On some smartphones, background-attachment: fixed is ignored. So
 .centered-link {
     display: flex;        /* Enables Flexbox layout */
     align-items: center;  /* Centers items vertically (along the cross-axis) */
+    flex-wrap: wrap;      /* Allow wrapping on small screens */
+    max-width: 100%;
     text-decoration: none; /* Optional: removes default link underline */
     color: black;
     /* Add other styles like padding, gap, or width as needed */
