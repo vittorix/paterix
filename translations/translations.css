@@ -71,7 +71,7 @@ html, body { /* On some smartphones, background-attachment: fixed is ignored. So
 .hero-content { 
   text-align: center;
   padding: 0.4rem;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 14px;
   /* backdrop-filter: blur(2px); */
 }
@@ -296,7 +296,7 @@ html, body { /* On some smartphones, background-attachment: fixed is ignored. So
 }
 
 .tile {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.8);
 
   border-radius: 12px;
   padding: 1rem 1.1rem;
@@ -314,7 +314,7 @@ html, body { /* On some smartphones, background-attachment: fixed is ignored. So
 .tile:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.7);
   border-color: rgba(255, 255, 255, 0.28);
 }
 
