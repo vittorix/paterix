@@ -331,6 +331,29 @@ html, body { /* On some smartphones, background-attachment: fixed is ignored. So
   word-break: break-word;
 }
 
+/* Hide scrollbars on tiles but keep content scrollable */
+.tile,
+.tile-body {
+  overflow: visible;
+}
+
+/* Make embedded iframe show full content and hide its scrollbars */
+.tile iframe {
+  width: 100%;
+  height: 1500px;      /* increase if the form is taller */
+  border: 0;
+  display: block;
+  overflow: hidden;    /* hide iframe scrollbars in the parent */
+  box-sizing: border-box;
+}
+
+/* Optional: reduce min-height on very small screens to avoid collapse */
+@media (max-width: 420px) {
+  .tile {
+    min-height: 100px;
+  }
+}
+
 /* 1 tile per row on smaller screens */
 @media (max-width: 720px) {
   .tiles-grid {

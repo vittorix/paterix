@@ -260,6 +260,11 @@
               '<a aria-label="Chat on WhatsApp" href="https://wa.me/13124798997?text=Free%20Quote%20Translation%0A%0A%3CPlease%20attach%20files%20to%20be%20translated%3E%0A%0APlease%20give%20me%20a%20quote%20of%20time%20and%20cost%20to%20translate%20the%20attached%20files.%0AMy%20name%20is%3A%20" class="centered-link">WhatsApp:&nbsp<img alt="Chat on WhatsApp" src="./whatsapp.png" / width="200px" height="35px"><a />' +
               "</div>",
           },
+          {
+            title: "Contact Form",
+            body: '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScuiQByzKqQ5eQycWfalGC7XtmHYIGe-FQpyZ2krl4YHG8JjQ/viewform?embedded=true" width="100%" height="1346" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
+            fullWidth: true,
+          },
         ],
       };
 
@@ -284,9 +289,6 @@
 
           const p = document.createElement("p");
           p.className = "tile-body";
-          // if (item.body) {
-
-          // }
           p.innerHTML = item.body || "";
           tile.appendChild(p);
 
