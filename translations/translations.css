@@ -208,6 +208,74 @@ html, body { /* On some smartphones, background-attachment: fixed is ignored. So
   }
 }
 
+/* MOBILE FIRST: Adjust layout to prevent horizontal overflow on small screens */
+@media (max-width: 600px) {
+  /* Prevent any horizontal scrolling */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Give main hero/content some horizontal padding instead of allowing elements to stick out */
+  .hero-overlay,
+  .hero-content,
+  .content-section,
+  #content-paragraphs,
+  .tiles-grid {
+    /* padding-left: 12px;
+    padding-right: 12px; */
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-overlay {
+    padding: 0;
+    margin-top: 160px;
+  }
+
+  /* Make tiles fluid and avoid fixed widths or negative margins */
+  .tiles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 0;
+  }
+
+  .tile {
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden; /* avoid inner content creating overflow */
+  }
+
+  /* Ensure forms, inputs, buttons and images never exceed the viewport */
+  .contact-form,
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button,
+  .tile img,
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  /* Make the top navbar scrollable horizontally instead of overflowing the page */
+  .site-header .navbar {
+    /* padding-left: 8px;
+    padding-right: 8px; */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+
+  .nav-link {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
 
 /* Content section below hero box */
 .content-section {
