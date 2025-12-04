@@ -473,6 +473,14 @@ html, body { /* On some smartphones, background-attachment: fixed is ignored. So
   .contact-form-iframe {
     display: inline-block;
   }
+
+  .tile:has(.contact-form-iframe) {
+    /* If parent is a CSS grid container */
+    grid-column: span 2;
+
+  /* If parent is a flex container */
+    flex: 2 1 0;
+  }
 }
 
 /* Desktop: even more spacing and slightly larger nav text */
