@@ -163,13 +163,6 @@ html, body { /* On some smartphones, background-attachment: fixed is ignored. So
   /* padding: 0 1.4rem; */
 }
 
-/* Anchor targets for deep-linkable sections */
-.section-anchor {
-  scroll-margin-top: 110px; /* offsets the fixed header */
-  height: 1px; /* keeps the anchor reliably targetable */
-}
-
-
 /* Tiles layout */
 #content-paragraphs {
   margin-top: 0.4rem;

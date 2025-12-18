@@ -27,13 +27,13 @@
   <body>
     <header class="site-header">
       <nav class="navbar">
-        <a href="#whyme" class="nav-link active" data-section="whyme">Why Me</a>
-        <a href="#how" class="nav-link" data-section="how">How It Works</a>
-        <a href="#testimonials" class="nav-link" data-section="testimonials"
+        <a href="#" class="nav-link active" data-section="whyme">Why Me</a>
+        <a href="#" class="nav-link" data-section="how">How It Works</a>
+        <a href="#" class="nav-link" data-section="testimonials"
           >Testimonials</a
         >
-        <a href="#prices" class="nav-link" data-section="prices">Prices</a>
-        <a href="#quote" class="nav-link" data-section="quote">Free Quote</a>
+        <a href="#" class="nav-link" data-section="prices">Prices</a>
+        <a href="#" class="nav-link" data-section="quote">Free Quote</a>
       </nav>
     </header>
 
@@ -54,11 +54,6 @@
       </section>
 
       <section class="content-section">
-        <div id="whyme" class="section-anchor" aria-hidden="true"></div>
-        <div id="how" class="section-anchor" aria-hidden="true"></div>
-        <div id="testimonials" class="section-anchor" aria-hidden="true"></div>
-        <div id="prices" class="section-anchor" aria-hidden="true"></div>
-        <div id="quote" class="section-anchor" aria-hidden="true"></div>
         <div id="content-paragraphs">
           <!-- Tiles will be injected here by JavaScript -->
         </div>
@@ -327,59 +322,27 @@
         container.appendChild(grid);
       }
 
-      function setActiveNav(sectionKey) {
-        document
-          .querySelectorAll(".nav-link")
-          .forEach((l) =>
-            l.classList.toggle("active", l.dataset.section === sectionKey)
-          );
-      }
-
-      function getSectionFromHash() {
-        const key = (window.location.hash || "").replace("#", "").trim();
-        return sectionContent[key] ? key : null;
-      }
-
-      function applySection(sectionKey) {
-        setSection(sectionKey);
-        setActiveNav(sectionKey);
-      }
-
       document.addEventListener("DOMContentLoaded", () => {
         const navLinks = document.querySelectorAll(".nav-link");
-
-        function applyFromHashOrDefault() {
-          const fromHash = getSectionFromHash();
-          const fallback =
-            document.querySelector(".nav-link.active")?.dataset.section ||
-            "whyme";
-          applySection(fromHash || fallback);
-        }
 
         navLinks.forEach((link) => {
           link.addEventListener("click", (e) => {
             e.preventDefault();
-            const sectionKey = link.dataset.section;
+            const section = link.dataset.section;
+            setSection(section);
 
-            applySection(sectionKey);
-
-            // Update URL hash so each section is linkable (e.g., /translations/#prices)
-            if (window.location.hash !== "#" + sectionKey) {
-              window.location.hash = sectionKey;
-            } else {
-              // If the hash is already the same, still jump to the anchor
-              const anchor = document.getElementById(sectionKey);
-              if (anchor) anchor.scrollIntoView({ block: "start" });
-            }
+            document
+              .querySelectorAll(".nav-link")
+              .forEach((l) => l.classList.remove("active"));
+            link.classList.add("active");
           });
         });
 
-        window.addEventListener("hashchange", () => {
-          const fromHash = getSectionFromHash();
-          if (fromHash) applySection(fromHash);
-        });
-
-        applyFromHashOrDefault();
+        // Load default section based on active nav, fallback to "whyme"
+        const defaultSection =
+          document.querySelector(".nav-link.active")?.dataset.section ||
+          "whyme";
+        setSection(defaultSection);
       });
     </script>
   </body>
