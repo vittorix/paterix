@@ -137,15 +137,6 @@ html, body { /* On some smartphones, background-attachment: fixed is ignored. So
   text-shadow: #020202 1px 0 2px;
 }
 
-.tagline span::after {
-  content: "·";
-  /* margin-left: 0.4rem; */
-}
-
-.tagline span:last-child::after {
-  content: "";
-}
-
 /* Dynamic paragraphs */
 #content-paragraphs p {
   font-size: 1.1rem;
