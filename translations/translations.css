@@ -20,7 +20,8 @@ body {
   /* justify-content: center; */
   overflow-x: hidden; /* prevent horizontal overflow on mobile */
 
-  background-image: url("vptranslations_768.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),  url("vptranslations_768.webp");
+  /* background-color: #0001309a; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -449,7 +450,7 @@ html, body { /* On some smartphones, background-attachment: fixed is ignored. So
 /* Tablet and up: more air, larger type in navbar */
 @media (min-width: 768px) {
   body {
-    background-image: url("vptranslations_1024.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("vptranslations_1024.webp");
   }
 
   .site-header {
@@ -484,7 +485,7 @@ html, body { /* On some smartphones, background-attachment: fixed is ignored. So
 /* Desktop: even more spacing and slightly larger nav text */
 @media (min-width: 1200px) {
   body {
-    background-image: url("vptranslations_1600.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("vptranslations_1600.webp");
   }
 
   .site-header {
