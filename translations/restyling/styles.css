@@ -81,9 +81,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* Web
   border: 0;                 /* invisible */
   color: var(--text);
   cursor: pointer;
-  padding: 10px 10px;
+  padding: 5px 10px;
   font-weight: 650;
-  font-size: 18px;           /* keep size on mobile too */
+  /*font-size: 18px;            keep size on mobile too */
+  font-size: clamp(18px, 1vw, 34px);
   letter-spacing: 0.2px;
   opacity: 0.92;
   transition: color 160ms ease, opacity 160ms ease, transform 160ms ease;
@@ -91,7 +92,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* Web
   line-height: 1.2;
   max-width: 100%;
 }
-.nav button:hover{ opacity: 1; transform: translateY(-1px); }
+.nav button:hover{ opacity: 1; transform: translateY(-3px); }
 .nav button:focus-visible{
   outline: 2px solid rgba(255, 255, 255, 0.25);
   outline-offset: 3px;
@@ -137,6 +138,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* Web
   /* color: rgb(61, 61, 253); */
   /* color: rgb(35, 35, 255); */
     color: #00f; 
+    line-height: 1.2em;
 }
 .section p{
   margin: 0 1em 1em;
