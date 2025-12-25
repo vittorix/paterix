@@ -139,7 +139,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* Web
     color: #00f; 
 }
 .section p{
-  margin: 0 0 1em;
+  margin: 0 1em 1em;
   color: var(--muted);
   line-height: 1.2em;
   font-size: 18px;
