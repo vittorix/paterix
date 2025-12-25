@@ -16,7 +16,7 @@
 
     <section class="right">
       <nav class="nav" role="tablist" aria-label="Site navigation">
-        <button class="tab active" role="tab" aria-selected="true" data-target="translate">Certified Translations</button>
+        <button class="tab active" role="tab" aria-selected="true" data-target="certified">Certified Translations</button>
         <button class="tab" role="tab" aria-selected="false" data-target="how">How it Works</button>
         <button class="tab" role="tab" aria-selected="false" data-target="testimonials">Testimonials</button>
         <button class="tab" role="tab" aria-selected="false" data-target="prices">Prices</button>
@@ -26,7 +26,7 @@
       <div class="divider" aria-hidden="true"></div>
 
       <div class="content">
-        <section id="translate" class="section active" role="tabpanel">
+        <section id="certified" class="section active" role="tabpanel">
           <h2>Certified Translations</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non neque ut eros gravida pharetra. Morbi a sem ut metus porta tempor. Curabitur vitae ipsum vitae justo hendrerit dignissim.</p>
           <p>Aliquam erat volutpat. Integer commodo, nisl in volutpat placerat, nisl turpis tristique dui, sed sollicitudin augue odio sit amet arcu. Vivamus vehicula, sem vitae dictum elementum, metus risus feugiat urna, a pellentesque nisi arcu ut quam.</p>
@@ -71,13 +71,7 @@
       const sections = Array.from(document.querySelectorAll('.section'));
       const nav = document.querySelector('.nav');
 
-      function setHash(id) {
-        if (location.hash !== '#' + id) {
-          history.replaceState(null, '', '#' + id);
-        }
-      }
-
-      function activate(targetId, { updateHash = true } = {}) {
+      function activate(targetId) {
         tabs.forEach(btn => {
           const isActive = btn.dataset.target === targetId;
           btn.classList.toggle('active', isActive);
@@ -88,27 +82,20 @@
           sec.classList.toggle('active', sec.id === targetId);
         });
 
-        if (updateHash) setHash(targetId);
-
         nav.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
 
-      tabs.forEach(btn => {
-        btn.addEventListener('click', () => activate(btn.dataset.target, { updateHash: true }));
-      });
+      tabs.forEach(btn => btn.addEventListener('click', () => activate(btn.dataset.target)));
 
-      function initFromHash() {
-        const id = (location.hash || '').replace('#', '');
-        const valid = sections.some(s => s.id === id);
-        activate(valid ? id : 'translate', { updateHash: !valid });
+      // Optional hash support
+      if (location.hash) {
+        const id = location.hash.replace('#', '');
+        if (sections.some(s => s.id === id)) activate(id);
       }
-
       window.addEventListener('hashchange', () => {
-        const id = (location.hash || '').replace('#', '');
-        if (sections.some(s => s.id === id)) activate(id, { updateHash: false });
+        const id = location.hash.replace('#', '');
+        if (sections.some(s => s.id === id)) activate(id);
       });
-
-      initFromHash();
     })();
   </script>
 </body>
