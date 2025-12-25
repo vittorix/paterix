@@ -134,8 +134,9 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* Web
   font-size: clamp(24px, 1.6vw, 34px);
   font-weight: 500;
   letter-spacing: 0.2px;
-  color: rgb(61, 61, 253);
-    /* color: #00f; */
+  /* color: rgb(61, 61, 253); */
+  /* color: rgb(35, 35, 255); */
+    color: #00f; 
 }
 .section p{
   margin: 0 0 1em;
