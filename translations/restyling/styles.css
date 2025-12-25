@@ -7,6 +7,9 @@
   --maxContent: 920px;
 }
 
+/* Prevent width+padding overflow (this was causing text to get "cut") */
+*, *::before, *::after { box-sizing: border-box; }
+
 /* Full black background + scroll allowed, but scrollbars hidden */
 html, body {
   height: 100%;
@@ -15,8 +18,9 @@ html, body {
   color: var(--text);
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   overflow-y: auto;
-  -ms-overflow-style: none;      /* IE/Edge */
-  scrollbar-width: none;         /* Firefox */
+  overflow-x: hidden;              /* remove accidental horizontal overflow */
+  -ms-overflow-style: none;        /* IE/Edge */
+  scrollbar-width: none;           /* Firefox */
 }
 html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* WebKit */
 
@@ -24,15 +28,22 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* Web
   min-height: 100vh;
   display: grid;
   grid-template-columns: minmax(240px, 38vw) 1fr;
-  gap: 0;
+  grid-template-rows: auto auto auto; /* avoid 1fr row that can clip content */
+  grid-template-areas:
+    "left nav"
+    "left divider"
+    "left content";
+  align-content: start;
+  align-items: start;
 }
 
-/* LEFT: image */
+/* LEFT: image (top-left) */
 .left{
+  grid-area: left;
   padding: var(--pad);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 .left img{
   width: 100%;
@@ -45,22 +56,23 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* Web
   -webkit-user-drag: none;
 }
 
-/* RIGHT: nav + sections */
-.right{
-  padding: var(--pad);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
+/* Sticky only on desktop where content stays in the right column */
+@media (min-width: 901px){
+  .left{
+    position: sticky;
+    top: 0;
+  }
 }
 
+/* NAV: top right (centered within remaining space) */
 .nav{
+  grid-area: nav;
+  padding: var(--pad) var(--pad) 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;  /* centered in remaining space */
+  justify-content: center;
   align-items: center;
   gap: 10px 18px;
-  padding-top: 8px;
 }
 
 .nav button{
@@ -71,10 +83,13 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* Web
   cursor: pointer;
   padding: 10px 10px;
   font-weight: 650;
-  font-size: 16px;
+  font-size: 16px;           /* keep size on mobile too */
   letter-spacing: 0.2px;
   opacity: 0.92;
   transition: color 160ms ease, opacity 160ms ease, transform 160ms ease;
+  white-space: normal;
+  line-height: 1.2;
+  max-width: 100%;
 }
 .nav button:hover{ opacity: 1; transform: translateY(-1px); }
 .nav button:focus-visible{
@@ -87,9 +102,22 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* Web
   opacity: 1;
 }
 
-.content{
+.divider{
+  grid-area: divider;
+  justify-self: center;
   width: 100%;
-  display: block;
+  max-width: var(--maxContent);
+  height: 1px;
+  background: rgba(255,255,255,0.10);
+  margin: 12px var(--pad) 0;
+}
+
+/* CONTENT */
+.content{
+  grid-area: content;
+  padding: 0 var(--pad) var(--pad);
+  width: 100%;
+  max-width: 100%;
 }
 
 .section{
@@ -97,7 +125,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* Web
   width: 100%;
   max-width: var(--maxContent);
   margin: 0 auto;
-  padding: 10px 4px 72px;
+  padding: 18px 4px 72px;
 }
 .section.active{ display: block; }
 
@@ -114,23 +142,65 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* Web
   font-size: 16px;
 }
 
-.divider{
-  width: 100%;
-  max-width: var(--maxContent);
-  margin: 0 auto;
-  height: 1px;
-  background: rgba(255,255,255,0.10);
-}
-
-/* Responsive: stack on smaller screens */
+/* Tablet / small screens:
+   keep picture LEFT and nav RIGHT, but stack buttons vertically;
+   content goes below BOTH */
 @media (max-width: 900px){
   .wrap{
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(210px, 42vw) 1fr;
+    grid-template-areas:
+      "left nav"
+      "divider divider"
+      "content content";
+  }
+
+  .nav{
+    padding: var(--pad) var(--pad) 0 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .nav button{
+    width: 100%;
+    text-align: center;
+  }
+
+  .divider{
+    margin: 12px auto 0;
+  }
+
+  .content{
+    padding-top: 0;
+  }
+}
+
+/* Mobile:
+   keep side-by-side top row, and make the picture as tall as the stacked navbar */
+@media (max-width: 520px){
+  .wrap{
+    grid-template-columns: minmax(170px, 38vw) 1fr;
+  }
+
+  .left{
+    padding: 12px 10px 12px 12px;
+    align-self: stretch;        /* stretch to match nav height */
+    align-items: stretch;
   }
   .left img{
-    max-height: 55vh;
+    width: 100%;
+    height: 100%;              /* match nav height */
+    max-height: none;
+    max-width: none;
+    object-fit: contain;
   }
-  .right{
-    min-height: auto;
+
+  .nav{
+    padding: 12px 12px 0 0;
+  }
+
+  .content{
+    padding: 0 12px 12px;
   }
 }
