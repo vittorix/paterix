@@ -134,12 +134,13 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* Web
   font-size: clamp(24px, 1.6vw, 34px);
   font-weight: 500;
   letter-spacing: 0.2px;
-  color: blue;
+  color: rgb(61, 61, 253);
+    /* color: #00f; */
 }
 .section p{
-  margin: 0 0 10px;
+  margin: 0 0 1em;
   color: var(--muted);
-  line-height: 1;
+  line-height: 1.2em;
   font-size: 18px;
 }
 
