@@ -134,9 +134,9 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* Web
 
 .section h2{
   margin: 0 0 10px;
-  font-size: clamp(22px, 1.6vw, 34px);
+  font-size: clamp(22px, 1.4vw, 34px);
   font-weight: 500;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.px;
   
   color: rgb(61, 61, 253);
   color: rgb(185, 35, 255);
