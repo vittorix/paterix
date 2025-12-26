@@ -85,7 +85,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* Web
   font-weight: 650;
   /*font-size: 18px;            keep size on mobile too */
   font-size: clamp(18px, 1vw, 34px);
-  letter-spacing: 0.2px;
+  letter-spacing: 0.6px;
   opacity: 0.92;
   transition: color 160ms ease, opacity 160ms ease, transform 160ms ease;
   white-space: normal;
@@ -137,14 +137,15 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* Web
   letter-spacing: 0.2px;
   /* color: rgb(61, 61, 253); */
   /* color: rgb(35, 35, 255); */
-    color: #00f; 
+    color: #bb86fc; 
     line-height: 1.1em;
 }
 .section p{
   margin: 0 1em 1em;
   color: var(--muted);
   line-height: 1.1em;
-  font-size: clamp(16px, 1.2vw, 24px);
+  font-size: clamp(16px, 1vw, 24px);
+  letter-spacing:  0.1px;
 }
 
 /* Tablet / small screens:
