@@ -134,13 +134,13 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* Web
 
 .section h2{
   margin: 0 0 10px;
-  font-size: clamp(22px, 1.4vw, 34px);
+  font-size: clamp(20px, 1vw, 34px);
   font-weight: 500;
-  letter-spacing: 0.px;
+  /* letter-spacing: 0.1px; */
   
   /*color: #9370db;
    color: #bb86fc; bei viola ma non funziano bene nel cell */
-  /* color: rgb(61, 61, 253);
+   /* color: rgb(61, 61, 253);
   color: rgb(185, 35, 255);
   color: rgb(255, 0, 0);
   color: #ff8a00;
@@ -149,15 +149,17 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* Web
   color: #347bff; 
   color: #c2540b; 
   color: #00aeff; 
-  color: #0096db;  */
-  color: #03cac5; 
-  
+  color: #0096db;  
+  color: #80ffff; 
+  color: #00b4ae; */
+  color: #00a19c;
+
   line-height: 1.1em;
 }
 .section p{
-  margin: 0 1em 1em;
+  margin: 0 0 0.7em 0.5em; /*top, right, bottom, left. left makes a nice indentation */
   color: var(--muted);
-  line-height: 1.1em;
+  line-height: 1.2em;
   font-size: clamp(16px, 1vw, 24px);
   letter-spacing:  0.1px;
 }
