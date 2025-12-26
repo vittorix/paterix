@@ -150,9 +150,9 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; } /* Web
   color: #0096db; 
   color: #03cac5; /*test*/
   
-  color: #9370db;
-
-  /* color: #bb86fc; bel viola ma non funzia bene nel cell */
+  
+  /*color: #9370db;
+   color: #bb86fc; bei viola ma non funziano bene nel cell */
   line-height: 1.1em;
 }
 .section p{
