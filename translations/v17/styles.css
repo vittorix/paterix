@@ -143,15 +143,6 @@ a:hover{ color: var(--accentHover); text-decoration: underline; }
   filter: drop-shadow(0 10px 28px rgba(0,0,0,0.35));
 }
 
-/* Sticky portrait only on desktop */
-@media (min-width: 901px){
-  .left{
-    position: sticky;
-    top: 0;
-    padding: var(--pad);
-  }
-}
-
 /* Nav wrapper (top-right) */
 .navWrap{
   grid-area: nav;
@@ -256,9 +247,9 @@ a:hover{ color: var(--accentHover); text-decoration: underline; }
 }
 
 /* Content panel */
-.content{
+.contenuto{
   align-self: center;
-  width: 100%;
+  width: 98%;
   max-width: min(100%, calc(var(--maxContent) + (2 * var(--pad))));
   justify-self: center;
 
@@ -396,15 +387,28 @@ body::before{
 }
 
 /* =========================
-   RESPONSIVE
+   DESKTOP
    ========================= */
-/* Tablet: keep image left, nav right stacked, content full width below */
-@media (max-width: 900px){
+@media (min-width: 901px){
+  .wrap{
+    margin-right: 15px;
+  }
+  .left{
+    position: sticky; /* Sticky portrait only on desktop */
+    top: 0;
+    padding: var(--pad);
+  }
+}
+
+/* =========================
+    TABLET          keep image left, nav right stacked, content full width below
+   ========================= */
+  @media (max-width: 900px){
   .wrap{
     grid-template-columns: minmax(220px, 42vw) 1fr;
     grid-template-rows: auto auto auto;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   /* Let the right wrapper dissolve so its children can become grid items */
@@ -428,7 +432,7 @@ body::before{
     visibility: hidden;
   }
 
-  .content{
+  .contenuto{
     grid-column: 1 / -1;
     grid-row: 3;
     margin-left: var(--pad);
@@ -448,12 +452,16 @@ body::before{
   }
 }
 
-/* Mobile:/* Mobile: picture height matches stacked nav */
+/* =========================
+    MOBILE          picture height matches stacked nav
+   ========================= */
 @media (max-width: 520px){
   .wrap{
     grid-template-columns: minmax(170px, 40vw) 1fr;
+    margin-left: 0px;
+    margin-right: 0px;
   }
-
+  
   .left{
     padding: 12px 10px 12px 12px;
     align-self: stretch;
@@ -465,12 +473,12 @@ body::before{
   }
 
   .navWrap{
-    padding: 12px 12px 0 0;
+    padding: 5px 0px 0 0;
   }
 
-  .content{
+  .contenuto{
     margin-left: 2px;
-    margin-right: 12px;
+    margin-right: 2px;
     padding: 10px;
   }
 
