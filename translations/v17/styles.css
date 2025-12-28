@@ -291,6 +291,12 @@ a:hover{ color: var(--accentHover); text-decoration: underline; }
   line-height: 1.05;
   font-size: clamp(15px, 1vw, 18px);
 }
+.vertical_spacer{
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--surface1), var(--surface2), var(--surface1));
+  margin-bottom: 10px;
+}
 
 .mt{ margin-top: 18px; }
 .mtSm{ margin-top: 14px; }
