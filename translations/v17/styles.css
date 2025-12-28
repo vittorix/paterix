@@ -58,13 +58,13 @@ html, body{
   background-color: var(--bg);
   /* Background texture: Topographic contours */
   background-image:
-    radial-gradient(1200px 900px at 12% 10%, color-mix(in srgb, var(--surface2), transparent 55%), transparent 62%),
-    repeating-radial-gradient(circle at 18% 54%,
+    radial-gradient(1200px 900px at 18% 54%, color-mix(in srgb, var(--text), transparent 89%), transparent 100%),
+    repeating-radial-gradient(circle at 18% 68%,
       color-mix(in srgb, var(--text), transparent var(--line_transparency)) 0,
       color-mix(in srgb, var(--text), transparent var(--line_transparency)) var(--line_thickness),
       transparent var(--line_thickness),
       transparent 14px),
-    repeating-radial-gradient(circle at 78% 72%,
+    repeating-radial-gradient(circle at 78% 34%,
       color-mix(in srgb, var(--text), transparent var(--line_transparency)) 0,
       color-mix(in srgb, var(--text), transparent var(--line_transparency)) var(--line_thickness),
       transparent var(--line_thickness),
