@@ -4,7 +4,8 @@
 :root{
   --pad: clamp(16px, 3vw, 48px);
   --maxContent: 920px;
-
+  --line_thickness: 3px;
+  
   /* Default theme = Neutral Pro */
   --bg: #0B0D10;
   --surface1: #12161C;
@@ -15,8 +16,8 @@
   --accent: #FF8A00;
   --accentHover: #FFA033;
   --focus: #5AA7FF;
-
   --shadow: 0 12px 28px rgba(0,0,0,0.35);
+
 }
 
 html[data-theme="inky"]{
@@ -59,13 +60,13 @@ html, body{
     radial-gradient(1200px 900px at 12% 10%, color-mix(in srgb, var(--surface2), transparent 55%), transparent 62%),
     repeating-radial-gradient(circle at 18% 34%,
       color-mix(in srgb, var(--text), transparent 96%) 0,
-      color-mix(in srgb, var(--text), transparent 96%) 1px,
-      transparent 1px,
+      color-mix(in srgb, var(--text), transparent 96%) var(--line_thickness),
+      transparent var(--line_thickness),
       transparent 14px),
     repeating-radial-gradient(circle at 78% 72%,
       color-mix(in srgb, var(--text), transparent 97%) 0,
-      color-mix(in srgb, var(--text), transparent 97%) 1px,
-      transparent 1px,
+      color-mix(in srgb, var(--text), transparent 97%) var(--line_thickness),
+      transparent var(--line_thickness),
       transparent 18px);
 
   color: var(--text);
