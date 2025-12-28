@@ -104,7 +104,7 @@ a:hover{ color: var(--accentHover); text-decoration: underline; }
 .wrap{
   min-height: 100vh;
   display: grid;
-  grid-template-columns: minmax(240px, 38vw) 1fr;
+  grid-template-columns: minmax(240px, 26vw) 1fr;
   align-items: start;
   align-content: start;
 
@@ -124,14 +124,16 @@ a:hover{ color: var(--accentHover); text-decoration: underline; }
 .left{
   grid-column: 1;
   grid-row: 1;
-  padding: var(--pad);
+  /* padding: calc(var(--pad) / 2); */
+  /* padding: var(--pad); */
+  padding: 0;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
 .left img{
   width: 100%;
-  max-width: 460px;
+  max-width: 360px;
   height: auto;
   max-height: calc(100vh - (2 * var(--pad)));
   object-fit: contain;
@@ -146,6 +148,7 @@ a:hover{ color: var(--accentHover); text-decoration: underline; }
   .left{
     position: sticky;
     top: 0;
+    padding: var(--pad);
   }
 }
 
@@ -279,9 +282,9 @@ a:hover{ color: var(--accentHover); text-decoration: underline; }
 .section.active{ display: block; }
 
 .section h2{
-  margin: 0 0 10px;
+  margin: 0 0 13px;
   font-size: clamp(20px, 1.2vw, 28px);
-  font-weight: 650;
+  font-weight: 600;
   color: color-mix(in srgb, var(--text), var(--accent) 18%);
   line-height: 1.15;
 }
@@ -292,9 +295,9 @@ a:hover{ color: var(--accentHover); text-decoration: underline; }
   color: var(--text);
 }
 .section p{
-  margin: 0 0 0.75em 0;
+  margin: 0 0 1em 1em;
   color: var(--muted);
-  line-height: 1.45;
+  line-height: 1.05;
   font-size: clamp(15px, 1vw, 18px);
 }
 
@@ -400,13 +403,19 @@ body::before{
   .wrap{
     grid-template-columns: minmax(220px, 42vw) 1fr;
     grid-template-rows: auto auto auto;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   /* Let the right wrapper dissolve so its children can become grid items */
   .right{ display: contents; }
 
   /* Stop sticky behavior on small screens */
-  .left{ position: static; }
+  .left{ 
+    position: static; 
+    max-width: 170px;
+    padding: 0;
+  }
 
   .navWrap{
     grid-column: 2;
@@ -415,9 +424,8 @@ body::before{
   }
 
   .divider{
-    grid-column: 1 / -1;
-    grid-row: 2;
-    margin-top: 12px;
+    margin-top: 0px;
+    visibility: hidden;
   }
 
   .content{
