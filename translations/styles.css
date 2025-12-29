@@ -398,7 +398,7 @@ a:hover{ color: var(--accentHover); text-decoration: underline; }
   display: none;
   width: 100%;
   border: none;
-  border-radius: 18px;
+  /* border-radius: 18px; */
 }
 
 
@@ -439,9 +439,9 @@ body::before{
   
   p iframe {
     width: 100%;
-    height: 1950px;      /* increase if the form is taller */
+    height: 1850px;      /* increase if the form is taller */
     border: 0;
-    border-radius: 14px;
+    /* border-radius: 14px; */
     display: block;
     overflow: hidden;    /* hide iframe scrollbars in the parent */
     box-sizing: border-box;
@@ -509,9 +509,9 @@ body::before{
 
   p iframe {
     width: 100%;
-    height: 1950px;      /* increase if the form is taller */
+    height: 1850px;      /* increase if the form is taller */
     border: 0;
-    border-radius: 14px;
+    /* border-radius: 14px; */
     display: block;
     overflow: hidden;    /* hide iframe scrollbars in the parent */
     box-sizing: border-box;
