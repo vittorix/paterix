@@ -297,8 +297,12 @@ a:hover{ color: var(--accentHover); text-decoration: underline; }
   font-weight: 700;
 }
 
-.vertical_space{
-  height: 0px;
+.vertical_space_small{
+  height: 1px;
+}
+
+.vertical_space_medium{
+  height: 4px;
 }
 
 .vertical_spacer{
@@ -390,6 +394,14 @@ a:hover{ color: var(--accentHover); text-decoration: underline; }
   box-shadow: 0 10px 22px rgba(0,0,0,0.32);
 }
 
+.contact-form-iframe {
+  display: none;
+  width: 100%;
+  border: none;
+  border-radius: 18px;
+}
+
+
 /* Variant 9: Soft grain overlay for a more premium texture */
 body::before{
   content: "";
@@ -415,10 +427,28 @@ body::before{
   .wrap{
     margin-right: 15px;
   }
+
   .left{
     position: sticky; /* Sticky portrait only on desktop */
     top: 0;
     padding: var(--pad);
+  }
+  .contact-form-iframe {
+    display: inline-block;
+  }
+  
+  p iframe {
+    width: 100%;
+    height: 1950px;      /* increase if the form is taller */
+    border: 0;
+    border-radius: 14px;
+    display: block;
+    overflow: hidden;    /* hide iframe scrollbars in the parent */
+    box-sizing: border-box;
+  }
+  
+  .contact-form-button {
+    display: none;
   }
 }
 
@@ -472,6 +502,24 @@ body::before{
     align-self: flex-end;
     text-align: right;
   }
+  
+  .contact-form-iframe {
+    display: inline-block;
+  }
+
+  p iframe {
+    width: 100%;
+    height: 1950px;      /* increase if the form is taller */
+    border: 0;
+    border-radius: 14px;
+    display: block;
+    overflow: hidden;    /* hide iframe scrollbars in the parent */
+    box-sizing: border-box;
+  }
+
+  .contact-form-button {
+    display: none;
+  }
 }
 
 /* =========================
@@ -509,5 +557,13 @@ body::before{
     width: 300px;
       margin: 0;
   }
+
+  .contact-form-button {
+    display: inline-block;
+  }
+
+  .contact-form-iframe {
+    display: none;
+  } 
 }
 
