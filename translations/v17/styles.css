@@ -58,7 +58,7 @@ html, body{
   background-color: var(--bg);
   /* Background texture: Topographic contours */
   background-image:
-    radial-gradient(1200px 900px at 18% 54%, color-mix(in srgb, var(--text), transparent 89%), transparent 100%),
+    radial-gradient(1200px 900px at 18% 68%, color-mix(in srgb, var(--text), transparent 89%), transparent 100%),
     repeating-radial-gradient(circle at 18% 68%,
       color-mix(in srgb, var(--text), transparent var(--line_transparency)) 0,
       color-mix(in srgb, var(--text), transparent var(--line_transparency)) var(--line_thickness),
@@ -259,7 +259,7 @@ a:hover{ color: var(--accentHover); text-decoration: underline; }
   padding: clamp(14px, 2vw, 22px);
   border-radius: 22px;
   background: linear-gradient(180deg, var(--surface1), var(--surface2));
-  border: 1px solid color-mix(in srgb, var(--border), transparent 25%);
+  /* border: 1px solid color-mix(in srgb, var(--border), transparent 25%); */
   box-shadow: var(--shadow);
 }
 

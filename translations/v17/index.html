@@ -36,9 +36,9 @@
               class="tab"
               role="tab"
               aria-selected="false"
-              data-target="testimonials"
+              data-target="reviews"
             >
-              Testimonials
+              Reviews
             </button>
             <button
               class="tab"
@@ -136,7 +136,7 @@
             </p>
           </section>
 
-          <section id="testimonials" class="section" role="tabpanel">
+          <section id="reviews" class="section" role="tabpanel">
             <h2>Customer Reviews</h2>
 
             <div class="metricGridWrap" aria-label="Review metrics">
@@ -324,11 +324,7 @@
         const sections = Array.from(document.querySelectorAll(".section"));
         const navWrap = document.querySelector(".navWrap");
 
-        // Backward-compatible hash aliases (in case you used #reviews previously)
-        const hashAlias = {
-          reviews: "testimonials",
-          testimonial: "testimonials",
-        };
+        const hashAlias = {};
 
         function normalizeHash(id) {
           return hashAlias[id] || id;
