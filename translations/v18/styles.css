@@ -291,6 +291,16 @@ a:hover{ color: var(--accentHover); text-decoration: underline; }
   line-height: 1.05;
   font-size: clamp(15px, 1vw, 18px);
 }
+
+.section p a{
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.vertical_space{
+  height: 0px;
+}
+
 .vertical_spacer{
   height: 4px;
   width: 100%;
@@ -310,9 +320,9 @@ a:hover{ color: var(--accentHover); text-decoration: underline; }
 .metricGridWrap{
   width: 500px;
   border-radius: 16px;
-  border: 1px solid color-mix(in srgb, var(--border), transparent 20%);
-  background: var(--surface2);
-  padding: 12px;
+  /* border: 1px solid color-mix(in srgb, var(--border), transparent 20%); */
+  /* background: var(--surface2); */
+  /* padding: 12px; */
   margin: 10px 5px 16px;
 
   /* Keep the metrics on the left and narrower, without breakpoints */
@@ -323,10 +333,14 @@ a:hover{ color: var(--accentHover); text-decoration: underline; }
 .metricGrid{
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  gap: 15px;
+  align-items: stretch;
+  /* align-items: last baseline; */
+  /* background-color: var(--focus); */
 }
 
 .metricCard{
+  /* height: 80px; */
   border-radius: 14px;
   padding: 10px 12px;
   border: 1px solid color-mix(in srgb, var(--border), transparent 35%);
@@ -335,6 +349,8 @@ a:hover{ color: var(--accentHover); text-decoration: underline; }
     color-mix(in srgb, var(--surface1), transparent 25%),
     var(--surface2)
   );
+  align-content: end;
+
 }
 
 .metricLabel{
