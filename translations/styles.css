@@ -447,6 +447,7 @@ body::before{
     width: 100%;
     height: 1850px;      /* increase if the form is taller */
     border: 0;
+        border: 1px solid color-mix(in srgb, var(--border), transparent 25%);
     border-radius: 14px;
     display: block;
     overflow: hidden;    /* hide iframe scrollbars in the parent */
