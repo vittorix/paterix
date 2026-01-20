@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="inky">
   <head>
     <meta charset="utf-8" />
@@ -256,7 +256,7 @@
                 </div>
                 <div class="metricCard">
                   <div class="metricLabel">Communication:</div>
-                  <div class="metricValue">10/10</div>
+                  <div class="metricValue">9.8/10</div>
                 </div>
                 <div class="metricCard">
                   <div class="metricLabel">Response time:</div>
@@ -272,7 +272,7 @@
                 </div>
                 <div class="metricCard">
                   <div class="metricLabel">Prices:</div>
-                  <div class="metricValue">9.4/10</div>
+                  <div class="metricValue">9.5/10</div>
                 </div>
               </div>
             </div>
@@ -335,6 +335,15 @@
               “The service was great and Vittorio did a great job. My overall
               score was 9 only because the cost, but about the quality, return
               time and availability Vittorio was great.”
+            </p>
+
+            <h3 class="mtSm">Larissa F. (Illinois, USA)</h3>
+            <p>
+              “Vittorio replied to my email very quickly with clear explanations
+              and direct answers, which immediately made me want to move forward
+              with his service instead of others. He was fast in responding,
+              open in communication, and very clear with all the information
+              provided. I have nothing to add — the experience was excellent.”
             </p>
           </section>
 
@@ -483,7 +492,7 @@
 
         tabs.forEach((btn) => {
           btn.addEventListener("click", () =>
-            activate(btn.dataset.target, { updateHash: true })
+            activate(btn.dataset.target, { updateHash: true }),
           );
         });
 
@@ -506,7 +515,7 @@
         // -----------------------------
         const root = document.documentElement;
         const themeButtons = Array.from(
-          document.querySelectorAll("[data-theme-set]")
+          document.querySelectorAll("[data-theme-set]"),
         );
         const THEME_KEY = "vp_theme";
 
@@ -524,7 +533,7 @@
 
         themeButtons.forEach((b) => {
           b.addEventListener("click", () =>
-            applyTheme(b.getAttribute("data-theme-set"))
+            applyTheme(b.getAttribute("data-theme-set")),
           );
         });
 
