@@ -31,7 +31,7 @@ body {
   line-height: 1.58;
 }
 
-body::before {
+/* body::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -41,9 +41,9 @@ body::before {
     linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
   background-size: 42px 42px;
   mask-image: linear-gradient(to bottom, rgba(0,0,0,.48), transparent 62%);
-}
+} */
 
-body::after {
+/* body::after {
   content: "";
   position: fixed;
   right: 0;
@@ -53,7 +53,7 @@ body::after {
   pointer-events: none;
   background: linear-gradient(90deg, transparent, var(--accent), var(--accent-soft));
   opacity: .75;
-}
+} */
 
 img, svg { max-width: 100%; }
 
@@ -108,27 +108,28 @@ a:hover { text-decoration: underline; }
 .brand:hover { text-decoration: none; }
 
 .brand-emblem {
-  width: 46px;
-  height: 46px;
-  flex: 0 0 46px;
+  width: 146px;
+  height: 146px;
+  flex: 0 0 146px;
   display: grid;
   place-items: center;
-  color: #050607;
+  
+  /* color: #050607;
   background: linear-gradient(135deg, var(--accent), var(--accent-soft));
   border-radius: 14px;
   box-shadow: 0 12px 30px rgba(214, 200, 110, .22);
   position: relative;
-  overflow: hidden;
+  overflow: hidden; */
 }
 
-.brand-emblem::after {
+/* .brand-emblem::after {
   content: "";
   position: absolute;
   inset: auto -18px 7px 12px;
   height: 3px;
   background: rgba(5,6,7,.45);
   transform: rotate(-18deg);
-}
+} */
 
 .brand-emblem span {
   position: relative;
@@ -149,7 +150,7 @@ a:hover { text-decoration: underline; }
   justify-content: flex-end;
   gap: 8px 18px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -511,10 +512,10 @@ h3 {
 }
 
 .footer-inner {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  gap: 16px;
-  align-items: center;
+  gap: 16px; */
+  /* align-items: center; */
   color: var(--muted-2);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
