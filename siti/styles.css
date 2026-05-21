@@ -143,8 +143,19 @@ a:hover { text-decoration: underline; }
 }
 
 .brand-text {
-  max-width: 320px;
+  max-width: 340px;
   line-height: 1.1;
+  color: #ff8142;
+  font-size: 18px;
+  /* background-color: rgba(255, 129, 66, .12); */
+}
+
+.brand .brand-text a {
+  text-decoration: none !important;
+}
+
+.brand .brand-text a:hover {
+  text-decoration: none !important;  
 }
 
 .nav-links {
@@ -530,7 +541,7 @@ h3 {
   .nav {
     align-items: flex-start;
     flex-direction: column;
-    padding: 15px 0;
+    padding: 5px 0;
   }
 
   .nav-links { justify-content: flex-start; }
