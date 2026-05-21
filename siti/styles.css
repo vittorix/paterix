@@ -14,11 +14,13 @@
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
   --radius: 22px;
   --max: 1120px;
+  --nav-height: 60px;
 }
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; 
+  scroll-padding-top: var(--nav-height);}
 
 body {
   margin: 0;
@@ -72,6 +74,7 @@ a:hover { text-decoration: underline; }
 .section {
   padding: 68px 0;
   position: relative;
+  scroll-margin-top: var(--nav-height);
 }
 
 .section.compact { padding: 50px 0; }
